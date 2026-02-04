@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Al Hanan Education Centre" }],
   creator: "Al Hanan Education Centre",
   metadataBase: new URL("https://alhanan.ug"),
-  canonical: "https://alhanan.ug",
+  alternates: {
+    canonical: "https://alhanan.ug",
+  },
   openGraph: {
     title: "Al Hanan Education Centre | Premium Muslim School",
     description: "Shaping minds, nurturing faith, building the future",
@@ -39,8 +41,6 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
-      "max-snippet": "-1",
-      "max-video-preview": "-1",
     },
   },
 };

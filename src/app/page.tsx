@@ -7,124 +7,126 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import TeamSection from "../components/TeamSection";
-
-const features = [
-	{
-		icon: <Zap className="w-8 h-8" />,
-		title: "Qur'an Memorization",
-		description: "Comprehensive Qur'anic memorization program with expert guidance, structured curriculum, and proven success in developing Hafiz students.",
-	},
-	{
-		icon: <Shield className="w-8 h-8" />,
-		title: "Islamic Excellence",
-		description: "Deep Islamic theology and religious studies integrated with faith-centered values, discipline, and character development.",
-	},
-	{
-		icon: <Users className="w-8 h-8" />,
-		title: "Holistic Development",
-		description: "Learners are shaped into disciplined, excellent thinkers with strong Islamic identity and real-life leadership capabilities.",
-	},
-	{
-		icon: <Globe className="w-8 h-8" />,
-		title: "Academic Mastery",
-		description: "Full secular curriculum delivered with academic rigor, ensuring learners complete Primary Seven with exceptional performance.",
-	},
-];
-
-const testimonials = [
-	{
-		name: "Amina Hassan",
-		role: "Parent, Al Hanan Learner",
-		text: "&ldquo;My child has grown not just academically, but spiritually. The combination of Qur'anic memorization and excellent academics is unmatched.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Dr. Muhammad Ssali",
-		role: "Educational Consultant",
-		text: "&ldquo;Al Hanan represents a new generation of African Muslim schools. The commitment to excellence in faith and academics is remarkable.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Zainab Nakigudde",
-		role: "Parent & Community Leader",
-		text: "&ldquo;Al Hanan learners are far different from ordinary learners. You can see the discipline, excellence, and faith in everything they do.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Sheikh Abdirahman Ali",
-		role: "Islamic Scholar",
-		text: "&ldquo;A school that combines rigorous academic excellence with Qur'anic mastery—this is what African Islamic education should be.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "James Lwanga",
-		role: "Guardian, Al Hanan Learner",
-		text: "&ldquo;The holistic development approach ensures my ward is not just passing exams, but becoming a leader of character.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Fatima Mayanja",
-		role: "Parent of Hafiz Graduate",
-		text: "&ldquo;Seeing my child complete the Qur'an memorization while maintaining academic excellence is a dream come true.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Prof. Nakajjugo",
-		role: "Ministry of Education Official",
-		text: "&ldquo;Al Hanan exemplifies what registered, innovative schools should look like in Uganda—excellence in faith and academics.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Ibrahim Musoke",
-		role: "Parent & Business Owner",
-		text: "&ldquo;The values and discipline instilled at Al Hanan will shape my children for life. It's a premium investment in their future.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Halima Nakato",
-		role: "Primary Seven Graduate, Al Hanan",
-		text: "&ldquo;I'm proud to have memorized the Qur'an and excelled in my academics. Al Hanan changed my life.&rdquo;",
-		rating: 5,
-	},
-	{
-		name: "Karim Hassan",
-		role: "Parent & Education Advocate",
-		text: "&ldquo;In a world of ordinary schools, Al Hanan stands out. The teaching staff are among the most proficient in the country.&rdquo;",
-		rating: 5,
-	},
-];
-
-const solutions = [
-	{
-		title: "Qur'an Memorization (Hifdh)",
-		description: "Students memorize and master the entire Holy Qur'an with expert guidance, completing their Hifdh by Primary Seven graduation.",
-		features: [
-			"Structured Memorization Curriculum",
-			"Expert Qur'anic Teachers",
-			"Daily Practice & Revision Sessions",
-		],
-	},
-	{
-		title: "Islamic Studies",
-		description: "Deep theological knowledge, Islamic law, and religious principles integrated into daily learning to build faith-centered leaders.",
-		features: [
-			"Islamic Theology & Jurisprudence",
-			"Character & Values Development",
-			"Islamic History & Civilization",
-		],
-	},
-	{
-		title: "Primary Education Excellence",
-		description: "Full secular curriculum delivered with academic rigor, English and Arabic proficiency, ensuring outstanding academic performance.",
-		features: [
-			"English Language Mastery",
-			"Arabic Fluency",
-			"Mathematics & Science Excellence",
-		],
-	},
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function HomePage() {
+	const { t } = useLanguage();
+	
+	const features = [
+		{
+			icon: <Zap className="w-8 h-8" />,
+			title: t("features.quranMemorization.title"),
+			description: t("features.quranMemorization.description"),
+		},
+		{
+			icon: <Shield className="w-8 h-8" />,
+			title: t("features.islamicExcellence.title"),
+			description: t("features.islamicExcellence.description"),
+		},
+		{
+			icon: <Users className="w-8 h-8" />,
+			title: t("features.holisticDevelopment.title"),
+			description: t("features.holisticDevelopment.description"),
+		},
+		{
+			icon: <Globe className="w-8 h-8" />,
+			title: t("features.academicMastery.title"),
+			description: t("features.academicMastery.description"),
+		},
+	];
+
+	const testimonials = [
+		{
+			name: t("testimonials.aminaHassan.name"),
+			role: t("testimonials.aminaHassan.role"),
+			text: t("testimonials.aminaHassan.text"),
+			rating: 5,
+		},
+		{
+			name: t("testimonials.drMuhammad.name"),
+			role: t("testimonials.drMuhammad.role"),
+			text: t("testimonials.drMuhammad.text"),
+			rating: 5,
+		},
+		{
+			name: t("testimonials.zainab.name"),
+			role: t("testimonials.zainab.role"),
+			text: t("testimonials.zainab.text"),
+			rating: 5,
+		},
+		{
+			name: "Sheikh Abdirahman Ali",
+			role: "Islamic Scholar",
+			text: "A school that combines rigorous academic excellence with Qur'anic mastery—this is what African Islamic education should be.",
+			rating: 5,
+		},
+		{
+			name: "James Lwanga",
+			role: "Guardian, Al Hanan Learner",
+			text: "The holistic development approach ensures my ward is not just passing exams, but becoming a leader of character.",
+			rating: 5,
+		},
+		{
+			name: "Fatima Mayanja",
+			role: "Parent of Hafiz Graduate",
+			text: "Seeing my child complete the Qur'an memorization while maintaining academic excellence is a dream come true.",
+			rating: 5,
+		},
+		{
+			name: "Prof. Nakajjugo",
+			role: "Ministry of Education Official",
+			text: "Al Hanan exemplifies what registered, innovative schools should look like in Uganda—excellence in faith and academics.",
+			rating: 5,
+		},
+		{
+			name: "Ibrahim Musoke",
+			role: "Parent & Business Owner",
+			text: "The values and discipline instilled at Al Hanan will shape my children for life. It's a premium investment in their future.",
+			rating: 5,
+		},
+		{
+			name: "Halima Nakato",
+			role: "Primary Seven Graduate, Al Hanan",
+			text: "I'm proud to have memorized the Qur'an and excelled in my academics. Al Hanan changed my life.",
+			rating: 5,
+		},
+		{
+			name: "Karim Hassan",
+			role: "Parent & Education Advocate",
+			text: "In a world of ordinary schools, Al Hanan stands out. The teaching staff are among the most proficient in the country.",
+			rating: 5,
+		},
+	];
+
+	const solutions = [
+		{
+			title: t("academics.quranProgram"),
+			description: "Students memorize and master the entire Holy Qur'an with expert guidance, completing their Hifdh by Primary Seven graduation.",
+			features: [
+				"Structured Memorization Curriculum",
+				"Expert Qur'anic Teachers",
+				"Daily Practice & Revision Sessions",
+			],
+		},
+		{
+			title: t("academics.islamicStudiesProgram"),
+			description: "Deep theological knowledge, Islamic law, and religious principles integrated into daily learning to build faith-centered leaders.",
+			features: [
+				"Islamic Theology & Jurisprudence",
+				"Character & Values Development",
+				"Islamic History & Civilization",
+			],
+		},
+		{
+			title: t("academics.primaryEducationProgram"),
+			description: "Full secular curriculum delivered with academic rigor, English and Arabic proficiency, ensuring outstanding academic performance.",
+			features: [
+				"English Language Mastery",
+				"Arabic Fluency",
+				"Mathematics & Science Excellence",
+			],
+		},
+	];
 	return (
 		<main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
 			<Navbar />
@@ -153,15 +155,15 @@ export default function HomePage() {
 						>
 							<h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6">
 								<span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-									Shaping Minds,
+									{t("hero.tagline").split(",")[0]},
 								</span>
 								<br />
 								<span className="text-white drop-shadow-lg">
-									Nurturing Faith, Building the Future
+									{t("hero.tagline").split(",").slice(1).join(",")}
 								</span>
 							</h1>
 							<p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
-								Where academic excellence meets Qur'anic mastery. Al Hanan Education Centre is a premium Muslim school dedicated to shaping disciplined, excellent leaders with unshakeable faith.
+								{t("hero.description")}
 							</p>
 							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
 								<motion.div
@@ -173,7 +175,7 @@ export default function HomePage() {
 										href="/admissions"
 										className="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 gap-2"
 									>
-										Apply Now
+										{t("hero.ctaButton")}
 										<ArrowRight className="w-5 h-5" />
 									</Link>
 								</motion.div>
@@ -186,7 +188,7 @@ export default function HomePage() {
 										href="#why-al-hanan"
 										className="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-emerald-900 transition-all duration-300"
 									>
-										Learn More
+										{t("hero.ctaSecondary")}
 									</Link>
 								</motion.div>
 							</div>
@@ -279,10 +281,10 @@ export default function HomePage() {
 					className="text-center mb-12 sm:mb-16"
 				>
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-						Our Academic Programs
+						{t("homepage.ourPrograms")}
 					</h2>
 					<p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-						Comprehensive educational pathways combining Qur'anic mastery, Islamic excellence, and academic achievement.
+						{t("homepage.programsDescription")}
 					</p>
 				</motion.div>
 
@@ -315,7 +317,7 @@ export default function HomePage() {
 									href="/academics"
 									className="inline-flex items-center text-white hover:text-emerald-300 transition-colors duration-300 gap-2"
 								>
-									Explore Program
+									{t("homepage.exploreProgram")}
 									<ArrowRight className="w-4 h-4" />
 								</Link>
 							</motion.div>
@@ -338,10 +340,10 @@ export default function HomePage() {
 					className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 text-center"
 				>
 					<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-						Ready to Shape Your Child&apos;s Future?
+						{t("homepage.ctaHeading")}
 					</h2>
 					<p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-						Join Al Hanan Education Centre and become part of a faith-centered community dedicated to academic excellence and Qur'anic mastery. Your child&apos;s journey to becoming a disciplined, excellent leader with unshakeable faith starts here.
+						{t("homepage.ctaDescription")}
 					</p>
 					<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
 						<motion.div
@@ -353,7 +355,7 @@ export default function HomePage() {
 								href="/admissions"
 								className="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 gap-2"
 							>
-								Apply Now
+								{t("nav.applyNow")}
 								<ArrowRight className="w-5 h-5" />
 							</Link>
 						</motion.div>
@@ -366,7 +368,7 @@ export default function HomePage() {
 								href="/location"
 								className="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 rounded-xl font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300"
 							>
-								Visit Us Today
+								{t("homepage.visitUsToday")}
 							</Link>
 						</motion.div>
 					</div>

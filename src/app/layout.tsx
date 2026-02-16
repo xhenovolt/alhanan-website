@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Tajawal } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Chatbot from "../components/Chatbot";
+import { LanguageProvider } from "../i18n/LanguageContext";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const tajawal = Tajawal({
+  variable: "--font-tajawal",
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -51,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <meta name="google-adsense-account" content="ca-pub-2545805112727180" />
         <Script
@@ -61,18 +68,20 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300`}>
-        <div className="min-h-screen relative overflow-x-hidden">
-          {/* Animated background elements */}
-          <div className="fixed inset-0 opacity-20 dark:opacity-10 pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full filter blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+      <body className={`${inter.variable} ${tajawal.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300`}>
+        <LanguageProvider>
+          <div className="min-h-screen relative overflow-x-hidden">
+            {/* Animated background elements */}
+            <div className="fixed inset-0 opacity-20 dark:opacity-10 pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full filter blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+            </div>
+            <div className="relative z-10">
+              {children}
+            </div>
+            <Chatbot />
           </div>
-          <div className="relative z-10">
-            {children}
-          </div>
-          <Chatbot />
-        </div>
+        </LanguageProvider>
       </body>
     </html>
   );

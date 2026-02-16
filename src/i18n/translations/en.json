@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "academics": "Academics",
+    "quranMemorization": "Qur'an Memorization",
+    "islamicStudies": "Islamic Studies",
+    "primaryEducation": "Primary Education",
+    "admissions": "Admissions",
+    "schoolLife": "School Life",
+    "gallery": "Gallery",
+    "location": "Location & Contact",
+    "applyNow": "Apply Now",
+    "language": "عربي"
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "hero": {
+    "tagline": "Shaping minds, nurturing faith, building the future",
+    "heading": "Premium Islamic Education in Uganda",
+    "description": "Al Hanan Education Centre combines rigorous academics with complete Qur'anic memorization, producing exceptional Muslim leaders.",
+    "ctaButton": "Explore Our Programs",
+    "ctaSecondary": "Schedule a Visit"
+  },
+  "features": {
+    "quranMemorization": {
+      "title": "Qur'an Memorization",
+      "description": "Comprehensive Qur'anic memorization program with expert guidance, structured curriculum, and proven success in developing Hafiz students."
+    },
+    "islamicExcellence": {
+      "title": "Islamic Excellence",
+      "description": "Deep Islamic theology and religious studies integrated with faith-centered values, discipline, and character development."
+    },
+    "holisticDevelopment": {
+      "title": "Holistic Development",
+      "description": "Learners are shaped into disciplined, excellent thinkers with strong Islamic identity and real-life leadership capabilities."
+    },
+    "academicMastery": {
+      "title": "Academic Mastery",
+      "description": "Full secular curriculum delivered with academic rigor, ensuring learners complete Primary Seven with exceptional performance."
+    }
+  },
+  "testimonials": {
+    "heading": "What Parents Say",
+    "aminaHassan": {
+      "name": "Amina Hassan",
+      "role": "Parent, Al Hanan Learner",
+      "text": "My child has grown not just academically, but spiritually. The combination of Qur'anic memorization and excellent academics is unmatched."
+    },
+    "drMuhammad": {
+      "name": "Dr. Muhammad Ssali",
+      "role": "Educational Consultant",
+      "text": "Al Hanan represents a new generation of African Muslim schools. The commitment to excellence in faith and academics is remarkable."
+    },
+    "zainab": {
+      "name": "Zainab Nakigudde",
+      "role": "Parent & Community Leader",
+      "text": "Al Hanan learners are far different from ordinary learners. You can see the discipline, excellence, and faith in everything they do."
+    }
+  },
+  "about": {
+    "pageTitle": "About Al Hanan Education Centre",
+    "pageDescription": "Learn about our mission, vision, and commitment to Islamic education excellence",
+    "sectionTitle": "About Al Hanan",
+    "missionTitle": "Our Mission",
+    "missionText": "To produce exceptional Muslim leaders who excel academically while maintaining strong Islamic values and character.",
+    "visionTitle": "Our Vision",
+    "visionText": "A world where Muslim students achieve complete Qur'anic memorization alongside academic excellence, becoming pillars of their communities."
+  },
+  "academics": {
+    "pageTitle": "Academic Programs",
+    "pageDescription": "Explore our comprehensive academic curriculum combining Islamic education with rigorous secular academics",
+    "sectionTitle": "Academic Excellence",
+    "quranProgram": "Qur'an Memorization Program",
+    "islamicStudiesProgram": "Islamic Studies Program",
+    "primaryEducationProgram": "Primary Education Program"
+  },
+  "admissions": {
+    "pageTitle": "Admissions",
+    "pageDescription": "Join Al Hanan Education Centre - Apply now for our comprehensive Islamic education program",
+    "heading": "Apply to Al Hanan",
+    "description": "Begin your journey with us. Al Hanan Education Centre welcomes students of all backgrounds.",
+    "applyButton": "Submit Application"
+  },
+  "contact": {
+    "pageTitle": "Contact Us",
+    "heading": "Get in Touch",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "sendMessage": "Send us a message",
+    "name": "Name",
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Message sent successfully!"
+  },
+  "footer": {
+    "about": "About Al Hanan",
+    "description": "Shaping minds, nurturing faith, building the future",
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 Al Hanan Education Centre. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "homepage": {
+    "ourPrograms": "Our Academic Programs",
+    "programsDescription": "Comprehensive educational pathways combining Qur'anic mastery, Islamic excellence, and academic achievement.",
+    "exploreProgram": "Explore Program",
+    "ctaHeading": "Ready to Shape Your Child's Future?",
+    "ctaDescription": "Join Al Hanan Education Centre and become part of a faith-centered community dedicated to academic excellence and Qur'anic mastery. Your child's journey to becoming a disciplined, excellent leader with unshakeable faith starts here.",
+    "visitUsToday": "Visit Us Today",
+    "testimonialHeading": "What Parents Say"
+  },
+  "schoolLife": {
+    "pageTitle": "School Life",
+    "heading": "Experience Al Hanan",
+    "description": "Discover the vibrant community and activities that make Al Hanan special"
+  },
+  "gallery": {
+    "pageTitle": "Gallery",
+    "heading": "Visual Gallery",
+    "description": "Explore moments from Al Hanan Education Centre"
+  },
+  "caseStudies": {
+    "pageTitle": "Case Studies",
+    "heading": "Success Stories",
+    "description": "Real stories of transformation and achievement"
+  },
+  "blog": {
+    "pageTitle": "Blog",
+    "heading": "Latest Articles",
+    "description": "Insights on Islamic education and student development"
+  },
+  "pricing": {
+    "pageTitle": "Pricing",
+    "heading": "Tuition & Fees",
+    "description": "Transparent pricing for our programs"
+  },
+  "faq": {
+    "pageTitle": "FAQ",
+    "heading": "Frequently Asked Questions",
+    "description": "Find answers to common questions about Al Hanan"
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy"
+  },
+  "terms": {
+    "pageTitle": "Terms of Service"
+  }
+}

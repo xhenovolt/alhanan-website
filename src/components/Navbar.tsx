@@ -3,12 +3,15 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
+import { useLanguage } from "../i18n/LanguageContext";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const { t, isRTL } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,21 +47,21 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.about"), href: "/about" },
     {
-      name: "Academics",
+      name: t("nav.academics"),
       href: "/academics",
       dropdown: [
-        { name: "Qur'an Memorization", href: "/academics#quran" },
-        { name: "Islamic Studies", href: "/academics#islamic" },
-        { name: "Primary Education", href: "/academics#primary" }
+        { name: t("nav.quranMemorization"), href: "/academics#quran" },
+        { name: t("nav.islamicStudies"), href: "/academics#islamic" },
+        { name: t("nav.primaryEducation"), href: "/academics#primary" }
       ]
     },
-    { name: "Admissions", href: "/admissions" },
-    { name: "School Life", href: "/school-life" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Location & Contact", href: "/location" }
+    { name: t("nav.admissions"), href: "/admissions" },
+    { name: t("nav.schoolLife"), href: "/school-life" },
+    { name: t("nav.gallery"), href: "/gallery" },
+    { name: t("nav.location"), href: "/location" }
   ];
 
   return (
@@ -101,6 +104,9 @@ export default function Navbar() {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-4">
+            {/* Language Toggle */}
+            <LanguageToggle />
+
             {/* Theme Toggle */}
             <motion.button
               onClick={toggleTheme}
@@ -122,7 +128,7 @@ export default function Navbar() {
                 href="/admissions"
                 className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                Apply Now
+                {t("nav.applyNow")}
               </Link>
             </motion.div>
 
@@ -178,7 +184,7 @@ export default function Navbar() {
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg"
                     onClick={() => setIsOpen(false)}
                   >
-                    Apply Now
+                    {t("nav.applyNow")}
                   </Link>
                 </div>
               </div>

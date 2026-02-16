@@ -50,3 +50,129 @@ body {
 .gradient-al-hanan-dark {
   @apply bg-gradient-to-r from-emerald-500 via-blue-500 to-cyan-400;
 }
+
+/* RTL Support */
+html.rtl {
+  font-family: var(--font-tajawal), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  direction: rtl;
+}
+
+html.rtl body {
+  direction: rtl;
+}
+
+html.rtl * {
+  --tw-translate-x: 0;
+}
+
+/* RTL-specific Tailwind adjustments */
+html.rtl .flex {
+  flex-direction: row-reverse;
+}
+
+html.rtl .flex-row-reverse {
+  flex-direction: row;
+}
+
+html.rtl .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 1rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 1.5rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 2rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .text-left {
+  text-align: right;
+}
+
+html.rtl .text-right {
+  text-align: left;
+}
+
+html.rtl .ml-2 {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+html.rtl .ml-4 {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+html.rtl .ml-6 {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+html.rtl .mr-2 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+html.rtl .mr-4 {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+html.rtl .mr-6 {
+  margin-left: 1.5rem;
+  margin-right: 0;
+}
+
+html.rtl .pl-4 {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+html.rtl .pl-6 {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+html.rtl .pr-4 {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+html.rtl .pr-6 {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+html.rtl .border-l-2 {
+  border-right: 2px;
+  border-left: none;
+}
+
+html.rtl .border-r {
+  border-left: 1px;
+  border-right: none;
+}
+
+html.rtl .border-l {
+  border-right: 1px;
+  border-left: none;
+}
+
+/* Smooth language transition */
+html {
+  transition: direction 0.3s ease, font-family 0.3s ease;
+}
+
+body {
+  transition: all 0.3s ease;
+}
+

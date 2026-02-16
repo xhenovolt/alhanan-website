@@ -3,30 +3,33 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   const footerLinks = {
-    "School": [
-      { name: "About Us", href: "/about" },
-      { name: "Academics", href: "/academics" },
-      { name: "Admissions", href: "/admissions" },
-      { name: "Contact", href: "/location" }
+    [t("footer.quickLinks")]: [
+      { name: t("nav.about"), href: "/about" },
+      { name: t("nav.academics"), href: "/academics" },
+      { name: t("nav.admissions"), href: "/admissions" },
+      { name: t("contact.contact"), href: "/location" }
     ],
-    "Academic": [
-      { name: "Qur'an Memorization", href: "/academics#quran" },
-      { name: "Islamic Studies", href: "/academics#islamic" },
-      { name: "Primary Education", href: "/academics#primary" },
-      { name: "School Life", href: "/school-life" }
+    [t("footer.programs")]: [
+      { name: t("nav.quranMemorization"), href: "/academics#quran" },
+      { name: t("nav.islamicStudies"), href: "/academics#islamic" },
+      { name: t("nav.primaryEducation"), href: "/academics#primary" },
+      { name: t("nav.schoolLife"), href: "/school-life" }
     ],
     "Resources": [
-      { name: "Gallery", href: "/gallery" },
+      { name: t("nav.gallery"), href: "/gallery" },
       { name: "Testimonials", href: "/testimonials" },
-      { name: "FAQ", href: "/faq" },
-      { name: "Blog", href: "/blog" }
+      { name: t("faq.pageTitle"), href: "/faq" },
+      { name: t("blog.pageTitle"), href: "/blog" }
     ],
     "Legal": [
-      { name: "Privacy Policy", href: "/privacy-policy" },
-      { name: "Terms of Service", href: "/terms-of-service" },
+      { name: t("footer.privacyPolicy"), href: "/privacy-policy" },
+      { name: t("footer.termsOfService"), href: "/terms-of-service" },
       { name: "Cookie Policy", href: "/cookie-policy" },
       { name: "Sitemap", href: "/sitemap" }
     ]

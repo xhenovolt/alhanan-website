@@ -13,7 +13,7 @@ export default function Footer() {
       { name: t("nav.about"), href: "/about" },
       { name: t("nav.academics"), href: "/academics" },
       { name: t("nav.admissions"), href: "/admissions" },
-      { name: t("contact.contact"), href: "/location" }
+      { name: t("footer.contact"), href: "/location" }
     ],
     [t("footer.programs")]: [
       { name: t("nav.quranMemorization"), href: "/academics#quran" },
@@ -21,17 +21,17 @@ export default function Footer() {
       { name: t("nav.primaryEducation"), href: "/academics#primary" },
       { name: t("nav.schoolLife"), href: "/school-life" }
     ],
-    "Resources": [
+    [t("footer.resources")]: [
       { name: t("nav.gallery"), href: "/gallery" },
-      { name: "Testimonials", href: "/testimonials" },
+      { name: t("footer.testimonials"), href: "/testimonials" },
       { name: t("faq.pageTitle"), href: "/faq" },
       { name: t("blog.pageTitle"), href: "/blog" }
     ],
-    "Legal": [
+    [t("footer.legal")]: [
       { name: t("footer.privacyPolicy"), href: "/privacy-policy" },
       { name: t("footer.termsOfService"), href: "/terms-of-service" },
-      { name: "Cookie Policy", href: "/cookie-policy" },
-      { name: "Sitemap", href: "/sitemap" }
+      { name: t("footer.cookiePolicy"), href: "/cookie-policy" },
+      { name: t("footer.sitemap"), href: "/sitemap" }
     ]
   };
 
@@ -49,21 +49,21 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4">
-                Al Hanan Education Centre
+                {t("footer.schoolName")}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                A premium Muslim school founded in 2019, dedicated to shaping minds through Qur'anic mastery and academic excellence. Registered with the Ministry of Education and Sports, Uganda.
+                {t("footer.schoolDescription")}
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-emerald-600" />
-                  <span className="text-gray-600 dark:text-gray-300">Bulubandi, Nakigo, Iganga, Uganda</span>
+                  <span className="text-gray-600 dark:text-gray-300">{t("footer.addressLine1")}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-emerald-600" />
-                  <span className="text-sm text-gray-600 dark:text-gray-300">Bulubandi–Kiboyo Road</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">{t("footer.addressLine2")}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-emerald-600" />
@@ -72,7 +72,7 @@ export default function Footer() {
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-emerald-600" />
                   <a href="tel:+256745726350" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors">
-                    0745 726 350
+                    +256 707 153 422
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -120,21 +120,21 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-500 rounded-2xl p-8 mb-12"
-        >
+            className="bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-500 rounded-2xl p-8 mb-12"
+          >
           <div className="text-center text-white">
-            <h4 className="text-2xl font-bold mb-4">Stay Connected</h4>
+            <h4 className="text-2xl font-bold mb-4">{t("footer.stayConnected")}</h4>
             <p className="mb-6 opacity-90">
-              Subscribe to get updates on admissions, school events, and academic excellence insights.
+              {t("footer.subscribeDescription")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t("footer.emailPlaceholder")}
                 className="flex-1 px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
               />
               <button className="px-6 py-3 bg-white text-emerald-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Subscribe
+                {t("footer.subscribe")}
               </button>
             </div>
           </div>
@@ -150,10 +150,10 @@ export default function Footer() {
         >
           <div className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0 text-sm">
             <span className="block">
-              © {new Date().getFullYear()} Al Hanan Education Centre. Registered with the Ministry of Education and Sports, Uganda.
+              © {new Date().getFullYear()} {t("footer.schoolName")}. {t("footer.registrationLine")}
             </span>
             <span className="block mt-1 text-xs text-gray-500 dark:text-gray-500 italic">
-              Designed with love by{' '}
+              {t("footer.designedByPrefix")}{" "}
               <a
                 href="https://xhenvolt.com"
                 target="_blank"

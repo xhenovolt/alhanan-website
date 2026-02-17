@@ -141,7 +141,7 @@ DRAIS is available in three pricing tiers:
 - Gold: UGX 2,500,000
 
 Pricing depends on project complexity. For a personalized quote, 
-contact our team at 0745 726 350 or +256 774 543 406.
+contact our team at +256 707 153 422 or +256 774 543 406.
 ```
 
 ## Security Features

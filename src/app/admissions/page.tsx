@@ -5,8 +5,11 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Phone, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AdmissionsPage() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
       <Navbar />
@@ -20,10 +23,10 @@ export default function AdmissionsPage() {
             className="text-center mb-12"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Join Al Hanan
+              {t("admissions.heading")}
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Begin your journey in academic excellence and Qur'anic mastery
+              {t("admissions.description")}
             </p>
           </motion.div>
 
@@ -31,18 +34,18 @@ export default function AdmissionsPage() {
             {[
               {
                 step: "1",
-                title: "Application",
-                description: "Submit your child's application form with required documents"
+                title: t("admissions.stepTitle1"),
+                description: t("admissions.stepDescription1")
               },
               {
                 step: "2",
-                title: "Assessment",
-                description: "Child assessment in English, Mathematics, and Islamic values"
+                title: t("admissions.stepTitle2"),
+                description: t("admissions.stepDescription2")
               },
               {
                 step: "3",
-                title: "Interview & Admission",
-                description: "Parent-child interview followed by admission decision"
+                title: t("admissions.stepTitle3"),
+                description: t("admissions.stepDescription3")
               }
             ].map((item, idx) => (
               <motion.div
@@ -73,15 +76,15 @@ export default function AdmissionsPage() {
             className="bg-white/80 dark:bg-gray-800/80 rounded-2xl p-8 md:p-12 border border-emerald-200 dark:border-emerald-700/50 mb-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Requirements
+              {t("admissions.requirements")}
             </h2>
             <ul className="space-y-4 mb-8">
               {[
-                "Birth certificate or national ID",
-                "Previous school records (if applicable)",
-                "Proof of residence",
-                "Health clearance",
-                "Assessment in English and Mathematics"
+                t("admissions.requirement1"),
+                t("admissions.requirement2"),
+                t("admissions.requirement3"),
+                t("admissions.requirement4"),
+                t("admissions.requirement5")
               ].map((req, idx) => (
                 <li key={idx} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-emerald-600" />
@@ -91,13 +94,13 @@ export default function AdmissionsPage() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:0745726350" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition">
+              <a href="tel:+256707153422" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition">
                 <Phone className="w-5 h-5" />
-                Call Us
+                {t("admissions.callUs")}
               </a>
               <a href="mailto:info@alhanan.ug" className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-emerald-600 text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition">
                 <Mail className="w-5 h-5" />
-                Email Us
+                {t("admissions.emailUs")}
               </a>
             </div>
           </motion.div>

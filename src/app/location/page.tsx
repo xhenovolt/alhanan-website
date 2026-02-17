@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function LocationPage() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
       <Navbar />
@@ -19,10 +21,10 @@ export default function LocationPage() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Visit Al Hanan
+              {t("location.heading")}
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Located in Iganga, Uganda. We welcome parents and prospective families.
+              {t("location.description")}
             </p>
           </motion.div>
 
@@ -57,7 +59,7 @@ export default function LocationPage() {
                   <MapPin className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      School Location
+                      {t("location.schoolLocation")}
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                       Bulubandi, Nakigo, Iganga District<br />
@@ -65,7 +67,7 @@ export default function LocationPage() {
                       Uganda
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                      Coordinates: 0°35'21.5"N 33°30'03.7"E
+                      {t("location.coordinates")} 0°35'21.5"N 33°30'03.7"E
                     </p>
                   </div>
                 </div>
@@ -77,10 +79,10 @@ export default function LocationPage() {
                   <Phone className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      Phone
+                      {t("location.phone")}
                     </h3>
-                    <a href="tel:0745726350" className="text-emerald-600 hover:text-emerald-700 font-semibold">
-                      0745 726 350
+                    <a href="tel:+256707153422" className="text-emerald-600 hover:text-emerald-700 font-semibold">
+                      +256 707 153 422
                     </a>
                   </div>
                 </div>
@@ -92,7 +94,7 @@ export default function LocationPage() {
                   <Mail className="w-6 h-6 text-cyan-600 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      Email
+                      {t("location.email")}
                     </h3>
                     <a href="mailto:info@alhanan.ug" className="text-emerald-600 hover:text-emerald-700 font-semibold">
                       info@alhanan.ug
@@ -107,18 +109,18 @@ export default function LocationPage() {
                   <Clock className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      School Hours
+                      {t("location.schoolHours")}
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300">
-                      Monday - Friday<br />
-                      8:00 AM - 3:30 PM EAT
+                      {t("location.daysOfWeek")}<br />
+                      {t("location.hours")}
                     </p>
                   </div>
                 </div>
               </div>
 
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                We welcome visits from parents and prospective families. Please contact us to schedule a visit.
+                {t("location.welcomeText")}
               </p>
             </motion.div>
           </div>

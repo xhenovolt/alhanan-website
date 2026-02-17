@@ -70,7 +70,7 @@ Content-Type: application/json
 ```json
 {
   "error": "Unable to process your message at this moment.",
-  "suggestion": "Please contact our team directly at 0745 726 350 or +256 774 543 406."
+  "suggestion": "Please contact our team directly at +256 707 153 422 or +256 774 543 406."
 }
 ```
 
@@ -226,7 +226,7 @@ The AI assistant responds using ONLY information from the knowledge base. It doe
 ### Missing Information
 If the knowledge base doesn't contain information about something, the assistant will say:
 ```
-"I don't have information about that. Please contact our team at 0745 726 350 or +256 774 543 406 for assistance."
+"I don't have information about that. Please contact our team at +256 707 153 422 or +256 774 543 406 for assistance."
 ```
 
 ---

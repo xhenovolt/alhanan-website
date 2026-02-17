@@ -5,8 +5,11 @@ import { BookOpen, Heart, Zap } from "lucide-react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AcademicsPage() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
       <Navbar />
@@ -20,10 +23,10 @@ export default function AcademicsPage() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Our Academic Programs
+              {t("academics.heading")}
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Excellence in faith, academics, and character development
+              {t("academics.description")}
             </p>
           </motion.div>
 
@@ -45,8 +48,8 @@ export default function AcademicsPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">World-Class Academic Facilities</h2>
-              <p className="text-white/90">Modern classrooms designed for optimal learning</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{t("academics.facilitiesTitle")}</h2>
+              <p className="text-white/90">{t("academics.facilitiesSubtitle")}</p>
             </div>
           </motion.div>
 
@@ -64,23 +67,23 @@ export default function AcademicsPage() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                  Qur'an Memorization (Hifdh)
+                  {t("academics.quran.title")}
                 </h2>
                 <p className="text-emerald-600 dark:text-emerald-400 font-semibold mt-1">
-                  Core Program
+                  {t("academics.quran.badge")}
                 </p>
               </div>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Students memorize and master the entire Holy Qur'an under expert guidance. Our structured curriculum ensures learners complete Hifdh by Primary Seven while maintaining excellent academic performance.
+              {t("academics.quran.description")}
             </p>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               {[
-                "Structured memorization curriculum aligned with national standards",
-                "Daily Qur'an study and revision sessions",
-                "Expert Qur'anic teachers with proven track record",
-                "Individual pace while maintaining high standards",
-                "Hifdh completion by Primary Seven graduation"
+                t("academics.quran.feature1"),
+                t("academics.quran.feature2"),
+                t("academics.quran.feature3"),
+                t("academics.quran.feature4"),
+                t("academics.quran.feature5")
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <span className="text-emerald-600 mt-1">✓</span>
@@ -104,23 +107,23 @@ export default function AcademicsPage() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                  Islamic Studies
+                  {t("academics.islamic.title")}
                 </h2>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold mt-1">
-                  Faith & Character Formation
+                  {t("academics.islamic.badge")}
                 </p>
               </div>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Deep theological knowledge and Islamic principles integrated into daily learning, shaping learners into disciplined, excellent individuals grounded in Islamic values.
+              {t("academics.islamic.description")}
             </p>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               {[
-                "Islamic theology and jurisprudence",
-                "Qur'anic interpretation (Tafsir) basics",
-                "Islamic history and civilization",
-                "Character and values development through Islamic principles",
-                "Integration of Islamic values in all subjects"
+                t("academics.islamic.feature1"),
+                t("academics.islamic.feature2"),
+                t("academics.islamic.feature3"),
+                t("academics.islamic.feature4"),
+                t("academics.islamic.feature5")
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <span className="text-blue-600 mt-1">✓</span>
@@ -144,23 +147,23 @@ export default function AcademicsPage() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                  Primary Education Excellence
+                  {t("academics.primary.title")}
                 </h2>
                 <p className="text-cyan-600 dark:text-cyan-400 font-semibold mt-1">
-                  Classes 1-7 (Full National Curriculum)
+                  {t("academics.primary.badge")}
                 </p>
               </div>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Rigorous academics delivered with excellence. English and Arabic proficiency, combined with Mathematics, Science, and Social Studies, prepare learners for secondary education success.
+              {t("academics.primary.description")}
             </p>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               {[
-                "English language mastery and fluency (Mother tongue of instruction)",
-                "Arabic language strong proficiency",
-                "Mathematics and Science excellence",
-                "Social studies with Islamic perspective",
-                "Physical education, arts, and digital literacy"
+                t("academics.primary.feature1"),
+                t("academics.primary.feature2"),
+                t("academics.primary.feature3"),
+                t("academics.primary.feature4"),
+                t("academics.primary.feature5")
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <span className="text-cyan-600 mt-1">✓</span>

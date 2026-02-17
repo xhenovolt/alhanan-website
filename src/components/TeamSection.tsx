@@ -2,70 +2,89 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Linkedin, Github, Twitter } from "lucide-react";
-
-const team = [
-	{
-		name: "Naminya Aslam",
-		role: "Headteacher",
-		bio: "Visionary educational leader guiding Al Hanan Education Centre with excellence, discipline, and commitment to Islamic values and academic achievement.",
-		specialties: [
-			"Educational Leadership",
-			"School Management",
-			"Academic Excellence",
-		],
-		social: {
-			linkedin: "#",
-			twitter: "#",
-			github: "#",
-		},
-	},
-	{
-		name: "Faisal Naminya",
-		role: "School Center Director",
-		bio: "Dynamic director overseeing school operations, ensuring conducive learning environment and seamless coordination of all school activities and programs.",
-		specialties: ["Operations Management", "Strategic Planning", "Center Coordination"],
-		social: {
-			linkedin: "#",
-			twitter: "#",
-			github: "#",
-		},
-	},
-	{
-		name: "Ganiyu Kule Hussein",
-		role: "Director Of Studies - Upper Primary",
-		bio: "Experienced educator dedicated to delivering rigorous academics and Qur'anic excellence for upper primary learners, fostering discipline and intellectual growth.",
-		specialties: ["Curriculum Development", "Academic Strategy", "Upper Primary Education"],
-		social: {
-			linkedin: "#",
-			twitter: "#",
-			github: "#",
-		},
-	},
-	{
-		name: "Wotali Hadijja",
-		role: "Director Of Studies - Lower Primary",
-		bio: "Nurturing educator focused on foundational learning and character development in lower primary, creating engaging and supportive learning experiences.",
-		specialties: ["Primary Education", "Foundational Learning", "Student Development"],
-		social: {
-			linkedin: "#",
-			twitter: "#",
-			github: "#",
-		},
-	},
-	{
-		name: "Maganda Thabit",
-		role: "Director Of Studies - Theology",
-		bio: "Islamic scholar dedicated to delivering comprehensive Islamic studies and Qur'anic memorization programs aligned with Al Hanan's faith-centered mission.",
-		specialties: ["Islamic Studies", "Qur'an Memorization", "Theology Education"],
-		social: {
-			linkedin: "#",
-			twitter: "#",
-			github: "#",
-		},
-	},
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function TeamSection() {
+	const { t } = useLanguage();
+
+	const team = [
+		{
+			name: t("team.members.naminyaAslam.name"),
+			role: t("team.members.naminyaAslam.role"),
+			bio: t("team.members.naminyaAslam.bio"),
+			specialties: [
+				t("team.members.naminyaAslam.specialty1"),
+				t("team.members.naminyaAslam.specialty2"),
+				t("team.members.naminyaAslam.specialty3"),
+			],
+			social: {
+				linkedin: "#",
+				twitter: "#",
+				github: "#",
+			},
+		},
+		{
+			name: t("team.members.faisalNaminya.name"),
+			role: t("team.members.faisalNaminya.role"),
+			bio: t("team.members.faisalNaminya.bio"),
+			specialties: [
+				t("team.members.faisalNaminya.specialty1"),
+				t("team.members.faisalNaminya.specialty2"),
+				t("team.members.faisalNaminya.specialty3"),
+			],
+			social: {
+				linkedin: "#",
+				twitter: "#",
+				github: "#",
+			},
+		},
+		{
+			name: t("team.members.ganiyuHussein.name"),
+			role: t("team.members.ganiyuHussein.role"),
+			bio: t("team.members.ganiyuHussein.bio"),
+			specialties: [
+				t("team.members.ganiyuHussein.specialty1"),
+				t("team.members.ganiyuHussein.specialty2"),
+				t("team.members.ganiyuHussein.specialty3"),
+			],
+			social: {
+				linkedin: "#",
+				twitter: "#",
+				github: "#",
+			},
+		},
+		{
+			name: t("team.members.wotaliHadijja.name"),
+			role: t("team.members.wotaliHadijja.role"),
+			bio: t("team.members.wotaliHadijja.bio"),
+			specialties: [
+				t("team.members.wotaliHadijja.specialty1"),
+				t("team.members.wotaliHadijja.specialty2"),
+				t("team.members.wotaliHadijja.specialty3"),
+			],
+			social: {
+				linkedin: "#",
+				twitter: "#",
+				github: "#",
+			},
+		},
+		{
+			name: t("team.members.magandaThabit.name"),
+			role: t("team.members.magandaThabit.role"),
+			bio: t("team.members.magandaThabit.bio"),
+			specialties: [
+				t("team.members.magandaThabit.specialty1"),
+				t("team.members.magandaThabit.specialty2"),
+				t("team.members.magandaThabit.specialty3"),
+			],
+			social: {
+				linkedin: "#",
+				twitter: "#",
+				github: "#",
+			},
+		},
+	];
+
 	return (
 		<section className="py-20">
 			<div className="max-w-7xl mx-auto px-6">
@@ -77,11 +96,10 @@ export default function TeamSection() {
 					className="text-center mb-16"
 				>
 					<h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-						Meet Our Leadership Team
+						{t("team.heading")}
 					</h2>
 					<p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-						Our dedicated team of educators and administrators is committed to 
-						delivering exceptional Islamic education combined with rigorous academics.
+						{t("team.description")}
 					</p>
 				</motion.div>
 

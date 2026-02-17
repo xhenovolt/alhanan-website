@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { useLanguage } from "../../i18n/LanguageContext";
 
 const pricingPlans = [
 	{
@@ -61,6 +62,8 @@ const pricingPlans = [
 ];
 
 export default function PricingPage() {
+	const { t } = useLanguage();
+
 	return (
 		<main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
 			<Navbar />
@@ -75,10 +78,10 @@ export default function PricingPage() {
 						className="text-center max-w-4xl mx-auto"
 					>
 						<h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-							Clear, Transparent Pricing
+							{t("pricing.heroTitle")}
 						</h1>
 						<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
-							Choose the plan that best fits your organization's needs. Scale as you grow.
+							{t("pricing.heroDescription")}
 						</p>
 					</motion.div>
 				</div>
@@ -104,7 +107,7 @@ export default function PricingPage() {
 							>
 								{plan.highlighted && (
 									<div className="bg-yellow-400 text-gray-900 py-2 text-center font-bold text-sm">
-										MOST POPULAR
+										{t("pricing.mostPopular")}
 									</div>
 								)}
 								
@@ -173,27 +176,27 @@ export default function PricingPage() {
 						className="text-center mb-16"
 					>
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-							Frequently Asked Questions
+							{t("pricing.faqHeading")}
 						</h2>
 					</motion.div>
 
 					<div className="space-y-6">
 						{[
 							{
-								question: "Can I upgrade my plan?",
-								answer: "Yes, you can upgrade at any time. We'll calculate the difference and adjust your billing accordingly."
+								question: t("pricing.question1"),
+								answer: t("pricing.answer1")
 							},
 							{
-								question: "What's included in support?",
-								answer: "All plans include technical support, bug fixes, and system maintenance. Premium plans include priority support and extended availability."
+								question: t("pricing.question2"),
+								answer: t("pricing.answer2")
 							},
 							{
-								question: "Is training included?",
-								answer: "Yes, all plans include user training. The extent varies by plan - Professional gets basic training, Premium gets comprehensive, and Gold gets dedicated support."
+								question: t("pricing.question3"),
+								answer: t("pricing.answer3")
 							},
 							{
-								question: "What if my needs change?",
-								answer: "We understand your business evolves. Contact our team to discuss custom options and scaling your solution."
+								question: t("pricing.question4"),
+								answer: t("pricing.answer4")
 							},
 						].map((faq, index) => (
 							<motion.div
@@ -227,10 +230,10 @@ export default function PricingPage() {
 						className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-3xl p-12 text-white shadow-2xl text-center"
 					>
 						<h2 className="text-3xl md:text-4xl font-bold mb-6">
-							Ready to Get Started?
+							{t("pricing.ctaTitle")}
 						</h2>
 						<p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-							Let's discuss your specific needs and find the perfect solution for your organization.
+							{t("pricing.ctaDescription")}
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<motion.div
@@ -241,7 +244,7 @@ export default function PricingPage() {
 									href="/contact"
 									className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 gap-2"
 								>
-									Schedule Consultation
+									{t("pricing.scheduleConsultation")}
 									<ArrowRight className="w-5 h-5" />
 								</Link>
 							</motion.div>
@@ -253,7 +256,7 @@ export default function PricingPage() {
 									href="/systems"
 									className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
 								>
-									Explore Systems
+									{t("pricing.exploreSystems")}
 								</Link>
 							</motion.div>
 						</div>

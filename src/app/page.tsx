@@ -101,29 +101,29 @@ export default function HomePage() {
 	const solutions = [
 		{
 			title: t("academics.quranProgram"),
-			description: "Students memorize and master the entire Holy Qur'an with expert guidance, completing their Hifdh by Primary Seven graduation.",
+			description: t("homepage.solutions.quran.description"),
 			features: [
-				"Structured Memorization Curriculum",
-				"Expert Qur'anic Teachers",
-				"Daily Practice & Revision Sessions",
+				t("homepage.solutions.quran.feature1"),
+				t("homepage.solutions.quran.feature2"),
+				t("homepage.solutions.quran.feature3"),
 			],
 		},
 		{
 			title: t("academics.islamicStudiesProgram"),
-			description: "Deep theological knowledge, Islamic law, and religious principles integrated into daily learning to build faith-centered leaders.",
+			description: t("homepage.solutions.islamic.description"),
 			features: [
-				"Islamic Theology & Jurisprudence",
-				"Character & Values Development",
-				"Islamic History & Civilization",
+				t("homepage.solutions.islamic.feature1"),
+				t("homepage.solutions.islamic.feature2"),
+				t("homepage.solutions.islamic.feature3"),
 			],
 		},
 		{
 			title: t("academics.primaryEducationProgram"),
-			description: "Full secular curriculum delivered with academic rigor, English and Arabic proficiency, ensuring outstanding academic performance.",
+			description: t("homepage.solutions.primary.description"),
 			features: [
-				"English Language Mastery",
-				"Arabic Fluency",
-				"Mathematics & Science Excellence",
+				t("homepage.solutions.primary.feature1"),
+				t("homepage.solutions.primary.feature2"),
+				t("homepage.solutions.primary.feature3"),
 			],
 		},
 	];
@@ -137,7 +137,7 @@ export default function HomePage() {
 				<div className="absolute inset-0 z-0">
 					<Image
 						src="/Alhanan/Alhanan compound.jpeg"
-						alt="Al Hanan Education Centre compound with school buildings and mosque dome"
+						alt={t("homepage.heroImageAlt")}
 						fill
 						priority
 						className="object-cover"
@@ -204,21 +204,21 @@ export default function HomePage() {
 								<div className="grid grid-cols-2 gap-4 mb-6">
 									<div className="bg-emerald-100 dark:bg-emerald-900/30 p-4 rounded-2xl text-center">
 										<div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">2019</div>
-										<div className="text-sm text-emerald-700 dark:text-emerald-300">Founded</div>
+										<div className="text-sm text-emerald-700 dark:text-emerald-300">{t("homepage.founded")}</div>
 									</div>
 									<div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-2xl text-center">
 										<div className="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</div>
-										<div className="text-sm text-blue-700 dark:text-blue-300">Registered</div>
+										<div className="text-sm text-blue-700 dark:text-blue-300">{t("homepage.registered")}</div>
 									</div>
 								</div>
 								<div className="flex items-center gap-2 mb-4">
 									{[...Array(5)].map((_, i) => (
 										<Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
 									))}
-									<span className="text-white ml-2">Trusted by African families</span>
+									<span className="text-white ml-2">{t("homepage.trustedByFamilies")}</span>
 								</div>
 								<p className="text-white/90 italic">
-									&quot;Al Hanan learners are far different from ordinary learners.&quot;
+									&quot;{t("homepage.quote")}&quot;
 								</p>
 							</div>
 						</motion.div>
@@ -237,10 +237,10 @@ export default function HomePage() {
 					className="text-center mb-12 sm:mb-16"
 				>
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-						Why Al Hanan?
+						{t("homepage.whyTitle")}
 					</h2>
 					<p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-						We don&apos;t just teach academics—we shape minds through faith, discipline, and excellence. Here&apos;s what sets us apart.
+						{t("homepage.whyDescription")}
 					</p>
 				</motion.div>
 

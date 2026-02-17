@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { useLanguage } from "../../i18n/LanguageContext";
 
 export default function ContactPage() {
+  const { t } = useLanguage();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -21,11 +23,11 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.subject || !form.message) {
-      setError("All fields are required.");
+      setError(t("contact.formError1"));
       return;
     }
     if (!validateEmail(form.email)) {
-      setError("Please enter a valid email address.");
+      setError(t("contact.formError2"));
       return;
     }
     setIsLoading(true);
@@ -40,27 +42,27 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Visit Our Office",
-      details: "Bulubandi, Iganga, Uganda",
-      subtitle: "East Africa Tech Hub"
+      title: t("contact.visitOffice"),
+      details: t("contact.bulubandi"),
+      subtitle: t("contact.eastAfricaHub")
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email Us",
-      details: "info@xhenvolt.com",
-      subtitle: "We respond within 24 hours"
+      title: t("contact.emailUs"),
+      details: "info@alhanan.ug",
+      subtitle: t("contact.emailResponse")
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
-      details: "0745 726 350",
-      subtitle: "Mon - Fri, 8:00 AM - 6:00 PM"
+      title: t("contact.callUs"),
+      details: "+256 707 153 422",
+      subtitle: t("contact.businessHours")
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Whatsapp / Telegram",
+      title: t("contact.whatsappTelegram"),
       details: "+256 774 543 406",
-      subtitle: "Quick response for urgent matters"
+      subtitle: t("contact.urgentResponse")
     }
   ];
 
@@ -78,10 +80,10 @@ export default function ContactPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              Let&apos;s Build Something Amazing Together
+              {t("contact.heroTitle")}
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with cutting-edge technology? Our team of experts is here to turn your vision into reality.
+              {t("contact.heroDescription")}
             </p>
           </motion.div>
         </div>
@@ -125,9 +127,9 @@ export default function ContactPage() {
             className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/50"
           >
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Send us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t("contact.sendMessage")}</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                Tell us about your project and we&apos;ll get back to you with a customized solution.
+                {t("contact.projectDescription")}
               </p>
             </div>
 
@@ -135,7 +137,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Full Name *
+                    {t("contact.nameLabel")}
                   </label>
                   <input
                     name="name"
@@ -143,13 +145,13 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     type="text"
-                    placeholder="Your name"
+                    placeholder={t("contact.yourName")}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email Address *
+                    {t("contact.emailLabel")}
                   </label>
                   <input
                     name="email"
@@ -157,7 +159,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder={t("contact.yourEmail")}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                 </div>
@@ -165,7 +167,7 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Subject *
+                  {t("contact.subjectLabel")}
                 </label>
                 <input
                   name="subject"
@@ -173,21 +175,21 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   type="text"
-                  placeholder="What&apos;s this about?"
+                  placeholder={t("contact.subjectPlaceholder")}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message *
+                  {t("contact.messageLabel")}
                 </label>
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={handleChange}
                   required
-                  placeholder="Tell us about your project, goals, and timeline..."
+                  placeholder={t("contact.messagePlaceholder")}
                   rows={6}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
                 />
@@ -211,7 +213,7 @@ export default function ContactPage() {
                   className="flex items-center gap-2 text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-3 rounded-xl"
                 >
                   <CheckCircle className="w-5 h-5" />
-                  <span className="text-sm">Thank you! Your message has been sent successfully.</span>
+                  <span className="text-sm">{t("contact.successMessage")}</span>
                 </motion.div>
               )}
 
@@ -227,7 +229,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
-                    Send Message
+                    {t("contact.sendButton")}
                   </>
                 )}
               </motion.button>
@@ -244,7 +246,7 @@ export default function ContactPage() {
           >
             {/* Map */}
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/50">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Find Us Here</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t("contact.findUsHere")}</h3>
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                   title="Xhenvolt Location"
@@ -261,14 +263,14 @@ export default function ContactPage() {
 
             {/* Why Choose Us */}
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/50">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Why Partner With Us?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t("contact.whyPartnerWithUs")}</h3>
               <ul className="space-y-4">
                 {[
-                  "24/7 Technical Support",
-                  "Proven Track Record",
-                  "Cutting-Edge Technology",
-                  "Tailored Solutions",
-                  "Competitive Pricing"
+                  t("contact.supportBenefit1"),
+                  t("contact.supportBenefit2"),
+                  t("contact.supportBenefit3"),
+                  t("contact.supportBenefit4"),
+                  t("contact.supportBenefit5")
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -296,9 +298,9 @@ export default function ContactPage() {
           className="mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("contact.readyToTransform")}</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join 25+ satisfied clients who have revolutionized their operations with our solutions in just 3 months.
+              {t("contact.joinClients")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -306,14 +308,14 @@ export default function ContactPage() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Schedule a Demo
+                {t("contact.scheduleDemo")}
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
-                View Our Work
+                {t("contact.viewOurWork")}
               </motion.button>
             </div>
           </div>

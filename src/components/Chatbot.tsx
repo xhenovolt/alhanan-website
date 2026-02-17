@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Bot, User, Sparkles } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface Message {
   id: string;
@@ -11,11 +12,32 @@ interface Message {
 }
 
 export default function Chatbot() {
+  const { language } = useLanguage();
+  const ui = {
+    welcome:
+      language === "ar"
+        ? "مرحبًا! 👋 أنا مساعد مركز الحنان التعليمي. أنا هنا للإجابة على أسئلتك حول المدرسة، بما في ذلك حفظ القرآن والدراسات الإسلامية والقبول والمزيد. كيف يمكنني مساعدتك اليوم؟"
+        : "Hello! 👋 I'm the Al Hanan Education Centre AI assistant. I'm here to answer questions about our school - including our Qur'anic memorization program, Islamic studies, academics, admissions, and more. How can I help you today?",
+    processingError:
+      language === "ar"
+        ? "أواجه صعوبة في معالجة طلبك الآن. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
+        : "I'm having trouble processing your request right now. Please contact Al Hanan at +256 707 153 422 or info@alhanan.ug for assistance.",
+    technicalError:
+      language === "ar"
+        ? "أواجه مشكلة تقنية حاليًا. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
+        : "I'm experiencing a technical issue. Please contact Al Hanan at +256 707 153 422 or info@alhanan.ug for assistance.",
+    noResponse: language === "ar" ? "لا يوجد رد" : "No response received",
+    quickQuestions: language === "ar" ? "أسئلة سريعة:" : "Quick questions:",
+    placeholder: language === "ar" ? "اكتب سؤالك..." : "Ask a question...",
+    assistantName: language === "ar" ? "مساعد الحنان" : "Al Hanan Assistant",
+    online: language === "ar" ? "متصل" : "Online",
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: "Hello! 👋 I'm the Al Hanan Education Centre AI assistant. I'm here to answer questions about our school - including our Qur'anic memorization program, Islamic studies, academics, admissions, and more. How can I help you today?",
+      text: ui.welcome,
       isUser: false,
       timestamp: new Date(),
     },
@@ -31,6 +53,15 @@ export default function Chatbot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    setMessages((prev) => {
+      if (prev.length === 0 || prev[0].id !== "1") return prev;
+      const next = [...prev];
+      next[0] = { ...next[0], text: ui.welcome };
+      return next;
+    });
+  }, [ui.welcome]);
 
   const sendMessage = async () => {
     if (!inputText.trim() || isLoading) return;
@@ -54,7 +85,7 @@ export default function Chatbot() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: currentInput }),
+        body: JSON.stringify({ message: currentInput, language }),
       });
 
       const data = await response.json();
@@ -65,7 +96,7 @@ export default function Chatbot() {
           id: (Date.now() + 1).toString(),
           text:
             data.error ||
-            "I'm having trouble processing your request right now. Please contact Al Hanan at 0745 726 350 or info@alhanan.ug for assistance.",
+            ui.processingError,
           isUser: false,
           timestamp: new Date(),
         };
@@ -76,7 +107,7 @@ export default function Chatbot() {
       // Add bot response
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.response || "No response received",
+        text: data.response || ui.noResponse,
         isUser: false,
         timestamp: new Date(),
       };
@@ -86,7 +117,7 @@ export default function Chatbot() {
       console.error("Error sending message:", error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I'm experiencing a technical issue. Please contact Al Hanan at 0745 726 350 or info@alhanan.ug for assistance.",
+        text: ui.technicalError,
         isUser: false,
         timestamp: new Date(),
       };
@@ -105,10 +136,10 @@ export default function Chatbot() {
 
   // Quick reply suggestions
   const quickReplies = [
-    "What is DRAIS?",
-    "Tell me about pricing",
-    "How can I contact your team?",
-    "What systems do you offer?",
+    language === "ar" ? "ما هو نظام DRAIS؟" : "What is DRAIS?",
+    language === "ar" ? "أخبرني عن الرسوم" : "Tell me about pricing",
+    language === "ar" ? "كيف يمكنني التواصل معكم؟" : "How can I contact your team?",
+    language === "ar" ? "ما الأنظمة التي تقدمونها؟" : "What systems do you offer?",
   ];
 
   const [showQuickReplies, setShowQuickReplies] = useState(true);
@@ -160,10 +191,10 @@ export default function Chatbot() {
                   </motion.div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-white">Al Hanan Assistant</h3>
+                  <h3 className="font-bold text-white">{ui.assistantName}</h3>
                   <div className="flex items-center gap-1">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <p className="text-xs text-white/80">Online</p>
+                    <p className="text-xs text-white/80">{ui.online}</p>
                   </div>
                 </div>
               </div>
@@ -252,7 +283,7 @@ export default function Chatbot() {
                   className="space-y-2"
                 >
                   <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                    Quick questions:
+                    {ui.quickQuestions}
                   </p>
                   <div className="grid grid-cols-2 gap-2">
                     {quickReplies.map((reply, index) => (
@@ -281,7 +312,7 @@ export default function Chatbot() {
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask a question..."
+                  placeholder={ui.placeholder}
                   className="flex-1 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   disabled={isLoading}
                 />

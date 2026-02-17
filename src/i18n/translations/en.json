@@ -16,7 +16,9 @@
   "common": {
     "language": "Language",
     "english": "English",
-    "arabic": "العربية"
+    "arabic": "العربية",
+    "nurseryTitle": "Nursery & Early Childhood Education",
+    "sermonCaption": "Abdul Swabur delivering a Friday sermon at Al Hanan Education Centre."
   },
   "hero": {
     "tagline": "Shaping minds, nurturing faith, building the future",
@@ -65,15 +67,84 @@
     "pageTitle": "About Al Hanan Education Centre",
     "pageDescription": "Learn about our mission, vision, and commitment to Islamic education excellence",
     "sectionTitle": "About Al Hanan",
+    "hero": {
+      "title": "About Al Hanan Education Centre",
+      "subtitle": "Shaping minds, nurturing faith, building the future—one learner at a time"
+    },
+    "ourStory": {
+      "title": "Our Story",
+      "paragraph1": "Al Hanan Education Centre was founded in 2019 by Ummul Qura Cultural and Development Foundation with a singular vision: to create a premium Muslim school in Uganda that would combine rigorous academics with comprehensive Qur'anic memorization (Hifdh).",
+      "paragraph2": "Fully registered and recognized by the Ministry of Education and Sports, Uganda, Al Hanan has grown into a beacon of Islamic education excellence in East Africa. Our learners are not ordinary—they embody discipline, academic excellence, unwavering Islamic faith, and authentic leadership.",
+      "paragraph3": "Located in Bulubandi, Nakigo, Iganga District, we provide a conducive learning environment where every learner completes Primary Seven having both memorized the entire Holy Qur'an and achieved outstanding academic performance.",
+      "imageAlt": "Al Hanan Education Centre Admin block building showcasing school infrastructure",
+      "established": "Established 2019"
+    },
     "missionTitle": "Our Mission",
-    "missionText": "To produce exceptional Muslim leaders who excel academically while maintaining strong Islamic values and character.",
+    "missionText": "To provide comprehensive Islamic education combined with rigorous academics, shaping learners into leaders of character, faith, and intellectual excellence who will transform their communities and the world.",
     "visionTitle": "Our Vision",
-    "visionText": "A world where Muslim students achieve complete Qur'anic memorization alongside academic excellence, becoming pillars of their communities."
+    "visionText": "To be a leading African Muslim school producing well-rounded, disciplined, excellent learners who are rooted in Islamic faith and academic excellence, setting the standard for premium Islamic education across East Africa.",
+    "coreValues": {
+      "title": "Our Core Values",
+      "description": "Guiding principles that define who we are and what we do"
+    },
+    "learnersDifferent": {
+      "title": "Al Hanan Learners Are Different",
+      "subtitle": "Shaped by discipline, excellence, and unshakeable Islamic faith",
+      "characteristic1": "Complete Qur'anic memorization",
+      "characteristic2": "Exceptional academic performance",
+      "characteristic3": "Strong Islamic faith and conviction",
+      "characteristic4": "Disciplined character and conduct",
+      "characteristic5": "Leadership and vision",
+      "characteristic6": "Fluency in English and Arabic",
+      "characteristic7": "Critical thinking and problem-solving",
+      "characteristic8": "Community awareness and service",
+      "characteristic9": "Preparation for secondary excellence"
+    },
+    "cta": {
+      "title": "Ready to Join Al Hanan?",
+      "description": "Begin your child's journey of academic excellence and Qur'anic mastery today.",
+      "applyButton": "Apply Now",
+      "visitButton": "Visit Us"
+    }
   },
   "academics": {
     "pageTitle": "Academic Programs",
     "pageDescription": "Explore our comprehensive academic curriculum combining Islamic education with rigorous secular academics",
     "sectionTitle": "Academic Excellence",
+    "heading": "Our Academic Programs",
+    "description": "Excellence in faith, academics, and character development",
+    "facilitiesTitle": "World-Class Academic Facilities",
+    "facilitiesSubtitle": "Modern classrooms designed for optimal learning",
+    "quran": {
+      "title": "Qur'an Memorization (Hifdh)",
+      "badge": "Core Program",
+      "description": "Students memorize and master the entire Holy Qur'an under expert guidance. Our structured curriculum ensures learners complete Hifdh by Primary Seven while maintaining excellent academic performance.",
+      "feature1": "Structured memorization curriculum aligned with national standards",
+      "feature2": "Daily Qur'an study and revision sessions",
+      "feature3": "Expert Qur'anic teachers with proven track record",
+      "feature4": "Individual pace while maintaining high standards",
+      "feature5": "Hifdh completion by Primary Seven graduation"
+    },
+    "islamic": {
+      "title": "Islamic Studies",
+      "badge": "Faith & Character Formation",
+      "description": "Deep theological knowledge and Islamic principles integrated into daily learning, shaping learners into disciplined, excellent individuals grounded in Islamic values.",
+      "feature1": "Islamic theology and jurisprudence",
+      "feature2": "Qur'anic interpretation (Tafsir) basics",
+      "feature3": "Islamic history and civilization",
+      "feature4": "Character and values development through Islamic principles",
+      "feature5": "Integration of Islamic values in all subjects"
+    },
+    "primary": {
+      "title": "Primary Education Excellence",
+      "badge": "Classes 1-7 (Full National Curriculum)",
+      "description": "Rigorous academics delivered with excellence. English and Arabic proficiency, combined with Mathematics, Science, and Social Studies, prepare learners for secondary education success.",
+      "feature1": "English language mastery and fluency (Mother tongue of instruction)",
+      "feature2": "Arabic language strong proficiency",
+      "feature3": "Mathematics and Science excellence",
+      "feature4": "Social studies with Islamic perspective",
+      "feature5": "Physical education, arts, and digital literacy"
+    },
     "quranProgram": "Qur'an Memorization Program",
     "islamicStudiesProgram": "Islamic Studies Program",
     "primaryEducationProgram": "Primary Education Program"
@@ -81,29 +152,103 @@
   "admissions": {
     "pageTitle": "Admissions",
     "pageDescription": "Join Al Hanan Education Centre - Apply now for our comprehensive Islamic education program",
-    "heading": "Apply to Al Hanan",
-    "description": "Begin your journey with us. Al Hanan Education Centre welcomes students of all backgrounds.",
-    "applyButton": "Submit Application"
+    "heading": "Join Al Hanan",
+    "description": "Begin your journey in academic excellence and Qur'anic mastery",
+    "stepTitle1": "Application",
+    "stepDescription1": "Submit your child's application form with required documents",
+    "stepTitle2": "Assessment",
+    "stepDescription2": "Child assessment in English, Mathematics, and Islamic values",
+    "stepTitle3": "Interview & Admission",
+    "stepDescription3": "Parent-child interview followed by admission decision",
+    "requirements": "Requirements",
+    "requirement1": "Birth certificate or national ID",
+    "requirement2": "Previous school records (if applicable)",
+    "requirement3": "Proof of residence",
+    "requirement4": "Health clearance",
+    "requirement5": "Assessment in English and Mathematics",
+    "callUs": "Call Us",
+    "emailUs": "Email Us"
+  },
+  "location": {
+    "heading": "Visit Al Hanan",
+    "description": "Located in Iganga, Uganda. We welcome parents and prospective families.",
+    "schoolLocation": "School Location",
+    "coordinates": "Coordinates:",
+    "phone": "Phone",
+    "email": "Email",
+    "schoolHours": "School Hours",
+    "daysOfWeek": "Monday - Friday",
+    "hours": "8:00 AM - 3:30 PM EAT",
+    "welcomeText": "We welcome visits from parents and prospective families. Please contact us to schedule a visit."
   },
   "contact": {
+    "findUsHere": "Find Us Here",
+    "whyPartnerWithUs": "Why Partner With Us?",
+    "supportBenefit1": "24/7 Technical Support",
+    "supportBenefit2": "Proven Track Record",
+    "supportBenefit3": "Cutting-Edge Technology",
+    "supportBenefit4": "Tailored Solutions",
+    "supportBenefit5": "Competitive Pricing",
+    "readyToTransform": "Ready to Transform Your Business?",
+    "joinClients": "Join 25+ satisfied clients who have revolutionized their operations with our solutions in just 3 months.",
+    "scheduleDemo": "Schedule a Demo",
+    "viewOurWork": "View Our Work",
     "pageTitle": "Contact Us",
     "heading": "Get in Touch",
+    "heroTitle": "Let's Build Something Amazing Together",
+    "heroDescription": "Ready to transform your school with cutting-edge technology? Our team of experts is here to turn your vision into reality.",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "sendMessage": "Send us a message",
-    "name": "Name",
-    "message": "Message",
-    "submit": "Submit",
-    "success": "Message sent successfully!"
+    "visitOffice": "Visit Our Office",
+    "bulubandi": "Bulubandi, Iganga, Uganda",
+    "eastAfricaHub": "East Africa Tech Hub",
+    "emailUs": "Email Us",
+    "emailResponse": "We respond within 24 hours",
+    "callUs": "Call Us",
+    "businessHours": "Mon - Fri, 8:00 AM - 6:00 PM",
+    "whatsappTelegram": "Whatsapp / Telegram",
+    "urgentResponse": "Quick response for urgent matters",
+    "sendMessage": "Send us a Message",
+    "projectDescription": "Tell us about your project and we'll get back to you with a customized solution.",
+    "fullName": "Full Name",
+    "nameLabel": "Full Name *",
+    "yourName": "Your name",
+    "emailLabel": "Email Address *",
+    "yourEmail": "your@email.com",
+    "subjectLabel": "Subject *",
+    "subjectPlaceholder": "What's this about?",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Tell us about your project, goals, and timeline...",
+    "successMessage": "Message sent successfully!",
+    "requiredFields": "All fields are required.",
+    "invalidEmail": "Please enter a valid email address.",
+    "sendButton": "Send",
+    "formError1": "All fields are required.",
+    "formError2": "Please enter a valid email address."
   },
   "footer": {
     "about": "About Al Hanan",
     "description": "Shaping minds, nurturing faith, building the future",
     "quickLinks": "Quick Links",
     "programs": "Programs",
+    "resources": "Resources",
+    "legal": "Legal",
     "contact": "Contact",
     "followUs": "Follow Us",
+    "testimonials": "Testimonials",
+    "cookiePolicy": "Cookie Policy",
+    "sitemap": "Sitemap",
+    "schoolName": "Al Hanan Education Centre",
+    "schoolDescription": "A premium Muslim school founded in 2019, dedicated to shaping minds through Qur'anic mastery and academic excellence. Registered with the Ministry of Education and Sports, Uganda.",
+    "addressLine1": "Bulubandi, Nakigo, Iganga, Uganda",
+    "addressLine2": "Bulubandi–Kiboyo Road",
+    "stayConnected": "Stay Connected",
+    "subscribeDescription": "Subscribe to get updates on admissions, school events, and academic excellence insights.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "registrationLine": "Registered with the Ministry of Education and Sports, Uganda.",
+    "designedByPrefix": "Designed with love by",
     "copyright": "© 2024 Al Hanan Education Centre. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
@@ -115,7 +260,80 @@
     "ctaHeading": "Ready to Shape Your Child's Future?",
     "ctaDescription": "Join Al Hanan Education Centre and become part of a faith-centered community dedicated to academic excellence and Qur'anic mastery. Your child's journey to becoming a disciplined, excellent leader with unshakeable faith starts here.",
     "visitUsToday": "Visit Us Today",
-    "testimonialHeading": "What Parents Say"
+    "testimonialHeading": "What Parents Say",
+    "heroImageAlt": "Al Hanan Education Centre compound with school buildings and mosque dome",
+    "founded": "Founded",
+    "registered": "Registered",
+    "trustedByFamilies": "Trusted by African families",
+    "quote": "Al Hanan learners are far different from ordinary learners.",
+    "whyTitle": "Why Al Hanan?",
+    "whyDescription": "We don't just teach academics, we shape minds through faith, discipline, and excellence. Here's what sets us apart.",
+    "solutions": {
+      "quran": {
+        "description": "Students memorize and master the entire Holy Qur'an with expert guidance, completing their Hifdh by Primary Seven graduation.",
+        "feature1": "Structured Memorization Curriculum",
+        "feature2": "Expert Qur'anic Teachers",
+        "feature3": "Daily Practice & Revision Sessions"
+      },
+      "islamic": {
+        "description": "Deep theological knowledge, Islamic law, and religious principles integrated into daily learning to build faith-centered leaders.",
+        "feature1": "Islamic Theology & Jurisprudence",
+        "feature2": "Character & Values Development",
+        "feature3": "Islamic History & Civilization"
+      },
+      "primary": {
+        "description": "Full secular curriculum delivered with academic rigor, English and Arabic proficiency, ensuring outstanding academic performance.",
+        "feature1": "English Language Mastery",
+        "feature2": "Arabic Fluency",
+        "feature3": "Mathematics & Science Excellence"
+      }
+    }
+  },
+  "team": {
+    "heading": "Meet Our Leadership Team",
+    "description": "Our dedicated team of educators and administrators is committed to delivering exceptional Islamic education combined with rigorous academics.",
+    "members": {
+      "naminyaAslam": {
+        "name": "Naminya Aslam",
+        "role": "Headteacher",
+        "bio": "Visionary educational leader guiding Al Hanan Education Centre with excellence, discipline, and commitment to Islamic values and academic achievement.",
+        "specialty1": "Educational Leadership",
+        "specialty2": "School Management",
+        "specialty3": "Academic Excellence"
+      },
+      "faisalNaminya": {
+        "name": "Faisal Naminya",
+        "role": "School Center Director",
+        "bio": "Dynamic director overseeing school operations, ensuring conducive learning environment and seamless coordination of all school activities and programs.",
+        "specialty1": "Operations Management",
+        "specialty2": "Strategic Planning",
+        "specialty3": "Center Coordination"
+      },
+      "ganiyuHussein": {
+        "name": "Ganiyu Kule Hussein",
+        "role": "Director Of Studies - Upper Primary",
+        "bio": "Experienced educator dedicated to delivering rigorous academics and Qur'anic excellence for upper primary learners, fostering discipline and intellectual growth.",
+        "specialty1": "Curriculum Development",
+        "specialty2": "Academic Strategy",
+        "specialty3": "Upper Primary Education"
+      },
+      "wotaliHadijja": {
+        "name": "Wotali Hadijja",
+        "role": "Director Of Studies - Lower Primary",
+        "bio": "Nurturing educator focused on foundational learning and character development in lower primary, creating engaging and supportive learning experiences.",
+        "specialty1": "Primary Education",
+        "specialty2": "Foundational Learning",
+        "specialty3": "Student Development"
+      },
+      "magandaThabit": {
+        "name": "Maganda Thabit",
+        "role": "Director Of Studies - Theology",
+        "bio": "Islamic scholar dedicated to delivering comprehensive Islamic studies and Qur'anic memorization programs aligned with Al Hanan's faith-centered mission.",
+        "specialty1": "Islamic Studies",
+        "specialty2": "Qur'an Memorization",
+        "specialty3": "Theology Education"
+      }
+    }
   },
   "schoolLife": {
     "pageTitle": "School Life",
@@ -140,12 +358,277 @@
   "pricing": {
     "pageTitle": "Pricing",
     "heading": "Tuition & Fees",
-    "description": "Transparent pricing for our programs"
+    "description": "Transparent pricing for our programs",
+    "heroTitle": "Clear, Transparent Pricing",
+    "heroDescription": "Choose the plan that best fits your organization's needs. Scale as you grow.",
+    "mostPopular": "MOST POPULAR",
+    "faqHeading": "Frequently Asked Questions",
+    "question1": "Can I upgrade my plan?",
+    "answer1": "Yes, you can upgrade at any time. We'll calculate the difference and adjust your billing accordingly.",
+    "question2": "What's included in support?",
+    "answer2": "All plans include technical support, bug fixes, and system maintenance. Premium plans include priority support and extended availability.",
+    "question3": "Is training included?",
+    "answer3": "Yes, all plans include user training. The extent varies by plan - Professional gets basic training, Premium gets comprehensive, and Gold gets dedicated support.",
+    "question4": "What if my needs change?",
+    "answer4": "We understand your business evolves. Contact our team to discuss custom options and scaling your solution.",
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDescription": "Let's discuss your specific needs and find the perfect solution for your organization.",
+    "scheduleConsultation": "Schedule Consultation",
+    "exploreSystems": "Explore Systems"
   },
   "faq": {
     "pageTitle": "FAQ",
     "heading": "Frequently Asked Questions",
-    "description": "Find answers to common questions about Al Hanan"
+    "description": "Find answers to common questions about Al Hanan",
+    "heroTitle": "Frequently Asked Questions",
+    "heroDescription": "Get instant answers to common questions about our services, processes, and support.",
+    "searchPlaceholder": "Search frequently asked questions...",
+    "allCategory": "All",
+    "stillHaveQuestions": "Still Have Questions?",
+    "stillHaveQuestionsDesc": "Can't find what you're looking for? Our team is here to help with personalized answers to your specific questions.",
+    "sendMessage": "Send us a Message",
+    "callNow": "Call Us Now",
+    "services": {
+      "title": "Services",
+      "q1": "What services does Al Hanan offer?",
+      "a1": "We provide comprehensive educational solutions including Qur'an memorization programs, Islamic studies, academic excellence programs, sports and arts activities, and community service programs. Our expertise spans primary and secondary education with specialized programs.",
+      "q2": "Do you work with international students?",
+      "a2": "Yes, while our main campus is in Bulubandi, Nakiggyo, Iganga, Uganda, we welcome students from across East Africa and internationally. Our management systems and communication enable us to work effectively with parents abroad.",
+      "q3": "What specializations and pathways do you offer?",
+      "a3": "We focus on Islamic education programs that combine Qur'an memorization, Islamic studies, and academic excellence. We offer specialized pathways in Qur'anic studies, academic excellence, and comprehensive leadership development."
+    },
+    "process": {
+      "title": "Administrative Process",
+      "q1": "How do I request a visit or consultation?",
+      "a1": "You can request a visit through our contact page, calling us directly, or emailing us. We'll schedule a convenient time to discuss your child's needs and showcase our facilities.",
+      "q2": "What is the academic calendar and holiday schedule?",
+      "a2": "We follow the standard Ugandan academic calendar with three school terms. We have set holiday periods and regular weekend breaks. Complete calendar information is provided to parents upon enrollment.",
+      "q3": "How do you handle changing student needs and curricula adaptation?",
+      "a3": "We take a comprehensive approach to teaching with regular assessments and feedback to parents. We coordinate with parents and teachers to customize support and curriculum based on individual student needs. Transparent communication throughout the year is essential."
+    },
+    "support": {
+      "title": "Support and Care",
+      "q1": "Do you provide support and care after enrollment?",
+      "a1": "Yes, all our programs include comprehensive support encompassing academic, psychological, health, and spiritual support. We provide regular counseling sessions, academic monitoring, and holistic student support throughout their school years.",
+      "q2": "What is the level of security and care in the school?",
+      "a2": "Safety and protection are our highest priorities. We implement standard safety protocols including continuous supervision, trained staff, a secure environment, and full compliance with Ugandan safety standards and protection policies.",
+      "q3": "How do you handle behavioral and academic challenges?",
+      "a3": "We have a specialized support team that works with students and parents to address challenges. We use positive specialized strategies rather than punishment. Support includes counseling, regular reviews, and customized action plans."
+    },
+    "fees": {
+      "title": "Fees and Payment",
+      "q1": "How are tuition fees determined?",
+      "a1": "Fees vary by program and academic level. We provide complete transparency in costs with breakdown of each fee component. Complete fee schedules are available from the admissions office.",
+      "q2": "Are there flexible payment options?",
+      "a2": "Yes, we offer flexible payment options including monthly, termly, and annual payments. We can also discuss special arrangements in specific cases. Contact the administration office to explore your options.",
+      "q3": "What additional fees are included beyond the basic tuition?",
+      "a3": "Additional fees may include books and learning materials, uniform, food and beverages, extra-curricular activities, and educational trips. A complete breakdown is provided to parents at the start and they are informed of any changes in advance."
+    }
+  },
+  "gallery": {
+    "pageTitle": "Gallery",
+    "heading": "Al Hanan Gallery",
+    "description": "Explore our world-class facilities and vibrant school life",
+    "gallery1": {
+      "title": "School Compound",
+      "category": "Facilities"
+    },
+    "gallery2": {
+      "title": "Admin Block",
+      "category": "Infrastructure"
+    },
+    "gallery3": {
+      "title": "Classroom Block",
+      "category": "Academic Facilities"
+    },
+    "gallery4": {
+      "title": "Nursery Classes",
+      "category": "Early Education"
+    },
+    "morePhotosTitle": "More Photos Coming Soon",
+    "morePhotosDesc": "We're continuously capturing and sharing moments from our vibrant school community. Check back regularly for updates!",
+    "scheduleVisit": "Schedule a Visit"
+  },
+  "blog": {
+    "pageTitle": "Blog",
+    "heading": "Insights & Innovations",
+    "description": "Stay updated with the latest trends, case studies, and educational insights from Al Hanan.",
+    "post1": {
+      "title": "Benefits of Combining Qur'an Memorization with Academic Education",
+      "excerpt": "Learn how the systematic combination of Qur'an memorization program with academic education enhances discipline, mental stability, and academic excellence."
+    },
+    "post2": {
+      "title": "Building Strong Islamic Character: The Role of Modern Education",
+      "excerpt": "Explore how school shapes strong Islamic characters through facilitating environments, positive role modeling, and values-driven education."
+    },
+    "post3": {
+      "title": "The Journey to Academic Excellence: From Nursery to Secondary",
+      "excerpt": "Discover the stages of academic development and how each stage supports comprehensive growth and sustained excellence for students."
+    }
+  },
+  "services": {
+    "pageTitle": "Services",
+    "heading": "Our Educational Services",
+    "description": "Discover the comprehensive programs and services offered by Al Hanan",
+    "service1": {
+      "title": "Qur'an Memorization Program",
+      "description": "A specialized program for Qur'an memorization with expert teachers, organized schedule, and proven curriculum for developing Hafiz (memorizers).",
+      "feature1": "Structured organized memorization sessions",
+      "feature2": "Experienced Qur'an teachers",
+      "feature3": "Daily revision and consolidation sessions"
+    },
+    "service2": {
+      "title": "Advanced Islamic Studies",
+      "description": "Deep Islamic knowledge and principles integrated into daily learning to build leaders firmly rooted in faith.",
+      "feature1": "Islamic theology and jurisprudence",
+      "feature2": "Character and values development",
+      "feature3": "Islamic history and civilization"
+    },
+    "service3": {
+      "title": "Comprehensive Academic Programs",
+      "description": "Complete academic curriculum delivered with high precision with mastery of English and Arabic ensuring outstanding academic performance.",
+      "feature1": "English language mastery",
+      "feature2": "Arabic language fluency",
+      "feature3": "Excellence in Mathematics and Science"
+    },
+    "service4": {
+      "title": "Sports and Arts Activities",
+      "description": "Comprehensive sports and arts program promoting physical health, creative growth, and holistic development.",
+      "feature1": "Diverse sports programs",
+      "feature2": "Creative and performing arts",
+      "feature3": "Motor and cognitive skill development"
+    },
+    "service5": {
+      "title": "Community Service Programming",
+      "description": "Projects teaching students to serve their community and wider society.",
+      "feature1": "Community service projects",
+      "feature2": "Social awareness development",
+      "feature3": "Service leadership and responsibility"
+    },
+    "service6": {
+      "title": "Support and Counseling Program",
+      "description": "Comprehensive student support encompassing academic, psychological, health, and spiritual support throughout their school years.",
+      "feature1": "Regular academic counseling",
+      "feature2": "Psychological and social support",
+      "feature3": "Health and spiritual support"
+    }
+  },
+  "newsletter": {
+    "pageTitle": "Newsletter",
+    "heading": "Stay Ahead of the Curve",
+    "description": "Join thousands of forward-thinking professionals who rely on our newsletter for the latest educational insights, trends, and exclusive updates.",
+    "whatYouGet": "What You'll Get",
+    "benefit1": {
+      "title": "Latest Educational Insights",
+      "description": "Get exclusive insights on emerging trends in Islamic education and academic development."
+    },
+    "benefit2": {
+      "title": "School Updates",
+      "description": "Be the first to know about school program updates, activities, achievements, and new opportunities."
+    },
+    "benefit3": {
+      "title": "Success Stories",
+      "description": "Learn from real stories from our students and parents and their educational development journeys."
+    },
+    "benefit4": {
+      "title": "Exclusive Offers",
+      "description": "Be the first to know about special offers, early access discounts, and limited opportunities for subscribers."
+    },
+    "newsForm": "Subscription Form",
+    "formTitle": "Subscribe to Our Newsletter",
+    "formDescription": "Once a month, we send a message of real value and insights you won't find elsewhere.",
+    "nameLabel": "Full Name",
+    "emailLabel": "Email Address",
+    "interests": "Your Interests",
+    "interests1": "Curriculum Development",
+    "interests2": "Qur'an Memorization Programs",
+    "interests3": "Academic Development",
+    "interests4": "Sports and Arts",
+    "interests5": "Islamic Studies",
+    "interests6": "Digital Marketing",
+    "interests7": "Technology Solutions",
+    "interests8": "Community Service",
+    "submitButton": "Subscribe Now",
+    "submitting": "Submitting...",
+    "successMessage": "Thank you for subscribing! Look for valuable messages in your inbox soon.",
+    "errorRequired": "Name and email are required.",
+    "errorEmail": "Please enter a valid email address."
+  },
+  "testimonials": {
+    "pageTitle": "What Parents Say",
+    "heading": "What Parents and Students Say",
+    "description": "Discover real experiences from parents and students who have enrolled in Al Hanan programs",
+    "testimonial1": {
+      "name": "Ngobi Peter",
+      "role": "Director, Northgate School",
+      "company": "Northgate School",
+      "text": "The DRAIS School Management System has completely transformed how we manage our school operations. From student enrollment to grade management, everything is now automated and efficient. Our teachers can easily input grades, parents receive real-time updates about their children's progress, and our administrative workload has reduced by over 60%. The parent-teacher communication portal has been particularly impressive - parents love being able to track attendance, assignments, and academic performance instantly."
+    },
+    "testimonial2": {
+      "name": "Ssekatawa Huzaifa",
+      "role": "Secretary, Bugembe Islamic Institute",
+      "company": "Bugembe Islamic Institute",
+      "text": "As an Islamic educational institution, we needed a system that could handle both our academic and religious studies curriculum seamlessly. The customized school management solution has exceeded our expectations. The system efficiently manages our Quran memorization programs, Islamic studies classes, and regular academic subjects. Arabic language support and Islamic calendar integration were particularly valuable."
+    },
+    "testimonial3": {
+      "name": "Wagogo Husama",
+      "role": "Headteacher, Albayan Quran Memorization Center",
+      "company": "Albayan Quran Memorization Center",
+      "text": "Managing a Quran memorization center requires specialized tools that traditional school systems don't provide. A tailored solution was developed that tracks each student's memorization progress, verse by verse. The system includes features for recording recitation assessments, tracking Tajweed improvements, and managing different levels of Quranic studies. Teachers can easily input daily progress, and parents receive detailed reports about their child's memorization journey."
+    },
+    "testimonial4": {
+      "name": "Sheikh Hassan Mwaita",
+      "role": "General Director",
+      "company": "Ibun Baz Girls Secondary School",
+      "text": "DRAIS has transformed our school management in ways we never imagined. Before implementing this system, we were managing everything manually, which was inefficient and error-prone. Now, with DRAIS, our administrative operations run seamlessly. The system has elevated our school management far beyond what we could achieve with traditional methods. It has brought efficiency, control, and modernization to every aspect of our operations."
+    },
+    "happiest": {
+      "name": "Wekesa Muhammad",
+      "role": "Chairperson, Bumwena Scrap SACCO",
+      "company": "Bumwena Scrap SACCO",
+      "text": "The Zyra SACCO Management System has transformed our scrap metal dealers' cooperative completely. Before this system, managing member contributions, loans, and savings was a manual nightmare with frequent errors and disputes. Now everything is automated and transparent. Members can check their account balances, loan status, and transaction history anytime through the member portal.",
+      "satisfaction": "100%",
+      "impact": "Transformed 500+ members' financial lives"
+    }
+  },
+  "schoolLife": {
+    "pageTitle": "School Life",
+    "heading": "School Life at Al Hanan",
+    "description": "A faith-centered, disciplined environment designed for holistic learner development",
+    "nurseryDesc": "Safe, nurturing environment for our youngest learners",
+    "learnersInAction": "Our Learners in Action",
+    "showcasingTalent": "Showcasing the exceptional talent and leadership of our learners",
+    "valuesTitle": "Our School Values",
+    "value1": "Integrity and honesty in all actions",
+    "value2": "Excellence in all endeavors",
+    "value3": "Respect and discipline",
+    "value4": "Islamic faith and practice",
+    "value5": "Community and cooperation",
+    "value6": "Continuous improvement and growth",
+    "activity1": {
+      "title": "Daily Qur'an Memorization",
+      "description": "Structured sessions for Qur'anic memorization with specialized guidance, organized curriculum, and continuous practice"
+    },
+    "activity2": {
+      "title": "Islamic Studies Classes",
+      "description": "Theology, jurisprudence, and Islamic history integrated into curriculum to build leaders grounded in faith"
+    },
+    "activity3": {
+      "title": "Academic Excellence",
+      "description": "Rigorous English, Arabic, Mathematics, and Science classes delivered with academic precision"
+    },
+    "activity4": {
+      "title": "Sports & Recreation",
+      "description": "Physical education and sporting activities for holistic development"
+    },
+    "activity5": {
+      "title": "Arts & Culture",
+      "description": "Creative and performing arts that celebrate Islamic and African culture"
+    },
+    "activity6": {
+      "title": "Community Service",
+      "description": "Projects teaching learners about serving their community and society"
+    }
   },
   "privacy": {
     "pageTitle": "Privacy Policy"

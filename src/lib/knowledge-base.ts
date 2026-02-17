@@ -24,7 +24,7 @@ export const alHananKnowledgeBase = {
       approvalStatus: "Approved and recognized educational institution"
     },
     contact: {
-      phone: ["0745 726 350"],
+      phone: ["+256 707 153 422"],
       email: "info@alhanan.ug",
       hours: "School Hours: 8:00 AM - 3:30 PM (Monday-Friday)"
     },
@@ -145,7 +145,7 @@ export const alHananKnowledgeBase = {
       "Proof of residence",
       "Health clearance"
     ],
-    contactAdmissions: "0745 726 350 or info@alhanan.ug",
+    contactAdmissions: "+256 707 153 422 or info@alhanan.ug",
     enrollmentDeadline: "Rolling admissions; early application recommended",
     scholarships: "Merit-based scholarships available for exceptional learners. Contact admissions office for details."
   },
@@ -204,7 +204,7 @@ export const alHananKnowledgeBase = {
     },
     {
       question: "How can I apply to Al Hanan?",
-      answer: "Please contact our admissions office at 0745 726 350 or email info@alhanan.ug. We require assessment in English and Mathematics, birth certificate, and health clearance."
+      answer: "Please contact our admissions office at +256 707 153 422 or email info@alhanan.ug. We require assessment in English and Mathematics, birth certificate, and health clearance."
     },
     {
       question: "What are the school hours?",
@@ -212,7 +212,7 @@ export const alHananKnowledgeBase = {
     },
     {
       question: "How can I visit the school?",
-      answer: "We welcome visits from parents and prospective families. Please contact us at 0745 726 350 to schedule a visit. We're located at Bulubandi, Nakigo, Iganga along the Bulubandi–Kiboyo Road."
+      answer: "We welcome visits from parents and prospective families. Please contact us at +256 707 153 422 to schedule a visit. We're located at Bulubandi, Nakigo, Iganga along the Bulubandi–Kiboyo Road."
     }
   ]
 };

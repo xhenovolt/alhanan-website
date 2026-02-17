@@ -61,17 +61,28 @@ function initializeGemini() {
 /**
  * Build the system prompt for Al Hanan Education Centre assistant
  */
-function buildSystemPrompt(knowledgeContext: string): string {
+function buildSystemPrompt(knowledgeContext: string, language: "en" | "ar"): string {
+  const noInfoMessage =
+    language === "ar"
+      ? "لا أملك معلومات عن ذلك. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
+      : "I don't have information about that. Please contact Al Hanan at +256 707 153 422 or info@alhanan.ug for assistance.";
+
+  const responseLanguageRule =
+    language === "ar"
+      ? "8. Always respond in Arabic unless the user explicitly asks for English."
+      : "8. Respond in English unless the user explicitly asks for Arabic.";
+
   return `You are the official Al Hanan Education Centre AI assistant, representing Al Hanan Education Centre - a premium Muslim school dedicated to academic excellence and Qur'anic memorization.
 
 CRITICAL RULES:
 1. Answer ONLY using the provided Al Hanan knowledge base information below
 2. Do NOT use general knowledge, assumptions, or external information
-3. If information is not in the knowledge base, explicitly say: "I don't have information about that. Please contact Al Hanan at 0745 726 350 or info@alhanan.ug for assistance."
+3. If information is not in the knowledge base, explicitly say: "${noInfoMessage}"
 4. NEVER provide information not specific to Al Hanan Education Centre
 5. Keep responses warm, welcoming, and professional
 6. Use friendly emojis appropriate to the school context (e.g., 📚 for learning, 🕌 for Islamic content)
 7. If a user asks for something outside Al Hanan's scope, politely redirect to available services
+${responseLanguageRule}
 
 AL HANAN EDUCATION CENTRE KNOWLEDGE BASE:
 ${knowledgeContext}
@@ -80,7 +91,7 @@ COMMUNICATION GUIDELINES:
 - Be warm, welcoming, and professional
 - Focus on Al Hanan's unique value: Qur'anic memorization + academic excellence
 - Provide specific details from the knowledge base
-- Always include contact information (0745 726 350 or info@alhanan.ug) when relevant
+- Always include contact information (+256 707 153 422 or info@alhanan.ug) when relevant
 - Emphasize the school's Islamic values, discipline, and excellence
 - Maintain a tone that reflects the school's premium, faith-centered nature`;
 }
@@ -89,7 +100,11 @@ COMMUNICATION GUIDELINES:
  * POST /api/chat - Production-ready AI chat endpoint
  */
 export async function POST(request: NextRequest) {
+  let responseLanguage: "en" | "ar" = "en";
   try {
+    const body = await request.json();
+    responseLanguage = body?.language === "ar" ? "ar" : "en";
+
     // Check rate limit
     const clientIp = getClientIp(request);
     const rateLimit = checkRateLimit(clientIp);
@@ -97,20 +112,26 @@ export async function POST(request: NextRequest) {
     if (!rateLimit.allowed) {
       return NextResponse.json(
         {
-          error: "Rate limit exceeded. Please try again in a moment.",
+          error:
+            responseLanguage === "ar"
+              ? "تم تجاوز حد الطلبات. يرجى المحاولة بعد قليل."
+              : "Rate limit exceeded. Please try again in a moment.",
           retryAfter: RATE_LIMIT_WINDOW / 1000,
         },
         { status: 429 }
       );
     }
 
-    // Parse request body
-    const body = await request.json();
     const { message } = body;
 
     if (!message || typeof message !== "string") {
       return NextResponse.json(
-        { error: "Message is required and must be a string" },
+        {
+          error:
+            responseLanguage === "ar"
+              ? "الرسالة مطلوبة ويجب أن تكون نصًا."
+              : "Message is required and must be a string",
+        },
         { status: 400 }
       );
     }
@@ -120,7 +141,12 @@ export async function POST(request: NextRequest) {
 
     if (sanitizedMessage.length === 0) {
       return NextResponse.json(
-        { error: "Message cannot be empty" },
+        {
+          error:
+            responseLanguage === "ar"
+              ? "لا يمكن أن تكون الرسالة فارغة."
+              : "Message cannot be empty",
+        },
         { status: 400 }
       );
     }
@@ -132,7 +158,7 @@ export async function POST(request: NextRequest) {
     const genAI = initializeGemini();
 
     // Build system prompt with knowledge context
-    const systemPrompt = buildSystemPrompt(relevantKnowledge);
+    const systemPrompt = buildSystemPrompt(relevantKnowledge, responseLanguage);
 
     // Call Gemini API using the new SDK
     // The new SDK requires system instructions to be embedded in the content itself
@@ -213,8 +239,14 @@ export async function POST(request: NextRequest) {
       // Return user-friendly error
       return NextResponse.json(
         {
-          error: "Unable to process your message at this moment.",
-          suggestion: "Please contact our team directly at 0745 726 350 or +256 774 543 406.",
+          error:
+            responseLanguage === "ar"
+              ? "تعذر معالجة رسالتك حاليًا."
+              : "Unable to process your message at this moment.",
+          suggestion:
+            responseLanguage === "ar"
+              ? "يرجى التواصل مع فريقنا مباشرة على +256 707 153 422 أو +256 774 543 406."
+              : "Please contact our team directly at +256 707 153 422 or +256 774 543 406.",
         },
         { status: 500 }
       );
@@ -222,8 +254,14 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       {
-        error: "An unexpected error occurred.",
-        suggestion: "Please contact our team directly at 0745 726 350 or +256 774 543 406.",
+        error:
+          responseLanguage === "ar"
+            ? "حدث خطأ غير متوقع."
+            : "An unexpected error occurred.",
+        suggestion:
+          responseLanguage === "ar"
+            ? "يرجى التواصل مع فريقنا مباشرة على +256 707 153 422 أو +256 774 543 406."
+            : "Please contact our team directly at +256 707 153 422 or +256 774 543 406.",
       },
       { status: 500 }
     );

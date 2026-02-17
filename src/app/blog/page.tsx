@@ -5,29 +5,31 @@ import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
-
-const blogPosts = [
-	{
-		title: "Empowering Ugandan Businesses with Cloud Solutions",
-		excerpt: "Learn how Xhenvolt’s cloud services are helping companies scale securely and efficiently.",
-		link: "#",
-		image: "/blog/cloud.jpg",
-	},
-	{
-		title: "How Lypha POS Streamlines Retail Management",
-		excerpt: "Discover the features of Lypha POS that make inventory and sales tracking effortless.",
-		link: "#",
-		image: "/blog/lypha.jpg",
-	},
-	{
-		title: "Designing Intuitive Interfaces for Better UX",
-		excerpt: "Explore best practices in UI/UX design that Xhenvolt applies for client success.",
-		link: "#",
-		image: "/blog/uiux.jpg",
-	},
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function BlogPage() {
+	const { t } = useLanguage();
+
+	const blogPosts = [
+		{
+			title: t("blog.post1.title"),
+			excerpt: t("blog.post1.excerpt"),
+			link: "#",
+			image: "/blog/cloud.jpg",
+		},
+		{
+			title: t("blog.post2.title"),
+			excerpt: t("blog.post2.excerpt"),
+			link: "#",
+			image: "/blog/lypha.jpg",
+		},
+		{
+			title: t("blog.post3.title"),
+			excerpt: t("blog.post3.excerpt"),
+			link: "#",
+			image: "/blog/uiux.jpg",
+		},
+	];
 	return (
 		<main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen font-sans">
 			<Navbar />

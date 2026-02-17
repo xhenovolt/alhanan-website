@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import Chatbot from "../components/Chatbot";
 import { LanguageProvider } from "../i18n/LanguageContext";
+import DynamicTranslator from "../components/DynamicTranslator";
+import FloatingLanguageToggle from "../components/FloatingLanguageToggle";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -70,6 +72,8 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${tajawal.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300`}>
         <LanguageProvider>
+          <DynamicTranslator />
+          <FloatingLanguageToggle />
           <div className="min-h-screen relative overflow-x-hidden">
             {/* Animated background elements */}
             <div className="fixed inset-0 opacity-20 dark:opacity-10 pointer-events-none">

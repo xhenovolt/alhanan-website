@@ -4,35 +4,37 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const galleryImages = [
-  {
-    src: "/Alhanan/Alhanan compound.jpeg",
-    alt: "Al Hanan Education Centre compound with school buildings and mosque dome",
-    title: "School Compound",
-    category: "Facilities"
-  },
-  {
-    src: "/Alhanan/Alhanan Admin block.jpeg",
-    alt: "Al Hanan Education Centre Admin block building showcasing school infrastructure",
-    title: "Admin Block",
-    category: "Infrastructure"
-  },
-  {
-    src: "/Alhanan/Alhanan class bloack Ultra wide.jpeg",
-    alt: "Al Hanan Education Centre Ultra wide classroom block with modern facilities",
-    title: "Classroom Block",
-    category: "Academic Facilities"
-  },
-  {
-    src: "/Alhanan/Alhanan Nursary classes.jpeg",
-    alt: "Al Hanan Education Centre Nursery classroom facilities for early childhood education",
-    title: "Nursery Classes",
-    category: "Early Education"
-  }
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function GalleryPage() {
+  const { t } = useLanguage();
+
+  const galleryImages = [
+    {
+      src: "/Alhanan/Alhanan compound.jpeg",
+      alt: "Al Hanan Education Centre compound with school buildings and mosque dome",
+      title: t("gallery.gallery1.title"),
+      category: t("gallery.gallery1.category")
+    },
+    {
+      src: "/Alhanan/Alhanan Admin block.jpeg",
+      alt: "Al Hanan Education Centre Admin block building showcasing school infrastructure",
+      title: t("gallery.gallery2.title"),
+      category: t("gallery.gallery2.category")
+    },
+    {
+      src: "/Alhanan/Alhanan class bloack Ultra wide.jpeg",
+      alt: "Al Hanan Education Centre Ultra wide classroom block with modern facilities",
+      title: t("gallery.gallery3.title"),
+      category: t("gallery.gallery3.category")
+    },
+    {
+      src: "/Alhanan/Alhanan Nursary classes.jpeg",
+      alt: "Al Hanan Education Centre Nursery classroom facilities for early childhood education",
+      title: t("gallery.gallery4.title"),
+      category: t("gallery.gallery4.category")
+    }
+  ];
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
       <Navbar />
@@ -46,10 +48,10 @@ export default function GalleryPage() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              Al Hanan Gallery
+              {t("gallery.heading")}
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Explore our world-class facilities and vibrant school life
+              {t("gallery.description")}
             </p>
           </motion.div>
 
@@ -89,13 +91,13 @@ export default function GalleryPage() {
             className="bg-white/80 dark:bg-gray-800/80 rounded-3xl p-8 md:p-12 border border-emerald-200 dark:border-emerald-700/50 text-center"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              More Photos Coming Soon
+              {t("gallery.morePhotosTitle")}
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We're continuously capturing and sharing moments from our vibrant school community. Check back regularly for updates!
+              {t("gallery.morePhotosDesc")}
             </p>
             <a href="/location" className="inline-block px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition">
-              Schedule a Visit
+              {t("gallery.scheduleVisit")}
             </a>
           </motion.div>
         </div>

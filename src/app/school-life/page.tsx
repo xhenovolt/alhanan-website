@@ -4,37 +4,40 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function SchoolLifePage() {
+  const { t } = useLanguage();
+
   const activities = [
     {
-      title: "Daily Qur'an Memorization",
-      description: "Structured sessions for Qur'anic memorization with revision and practice",
+      title: t("schoolLife.activity1.title"),
+      description: t("schoolLife.activity1.description"),
       color: "from-emerald-600 to-green-600"
     },
     {
-      title: "Islamic Studies Classes",
-      description: "Theology, jurisprudence, and Islamic history integrated into curriculum",
+      title: t("schoolLife.activity2.title"),
+      description: t("schoolLife.activity2.description"),
       color: "from-blue-600 to-cyan-600"
     },
     {
-      title: "Academic Excellence",
-      description: "Rigorous English, Arabic, Mathematics, and Science classes",
+      title: t("schoolLife.activity3.title"),
+      description: t("schoolLife.activity3.description"),
       color: "from-purple-600 to-pink-600"
     },
     {
-      title: "Sports & Recreation",
-      description: "Physical education and sporting activities for holistic development",
+      title: t("schoolLife.activity4.title"),
+      description: t("schoolLife.activity4.description"),
       color: "from-yellow-500 to-orange-600"
     },
     {
-      title: "Arts & Culture",
-      description: "Creative and performing arts that celebrate Islamic and African culture",
+      title: t("schoolLife.activity5.title"),
+      description: t("schoolLife.activity5.description"),
       color: "from-red-600 to-pink-600"
     },
     {
-      title: "Community Service",
-      description: "Projects teaching learners about serving their community and society",
+      title: t("schoolLife.activity6.title"),
+      description: t("schoolLife.activity6.description"),
       color: "from-indigo-600 to-blue-600"
     }
   ];
@@ -52,10 +55,10 @@ export default function SchoolLifePage() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              School Life at Al Hanan
+              {t("schoolLife.heading")}
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              A faith-centered, disciplined environment designed for holistic learner development
+              {t("schoolLife.description")}
             </p>
           </motion.div>
 
@@ -77,8 +80,8 @@ export default function SchoolLifePage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Nursery & Early Childhood Education</h2>
-              <p className="text-white/90">Safe, nurturing environment for our youngest learners</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{t("common.nurseryTitle")}</h2>
+              <p className="text-white/90">{t("schoolLife.nurseryDesc")}</p>
             </div>
           </motion.div>
 
@@ -93,11 +96,11 @@ export default function SchoolLifePage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
                 <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
-                  Our Learners in Action
+                  {t("schoolLife.learnersInAction")}
                 </span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Showcasing the exceptional talent and leadership of our learners
+                {t("schoolLife.showcasingTalent")}
               </p>
             </div>
 
@@ -145,16 +148,16 @@ export default function SchoolLifePage() {
             className="bg-white/80 dark:bg-gray-800/80 rounded-3xl p-12 border border-emerald-200 dark:border-emerald-700/50"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Our School Values
+              {t("schoolLife.valuesTitle")}
             </h2>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
               {[
-                "Integrity and honesty in all actions",
-                "Excellence in all endeavors",
-                "Respect and discipline",
-                "Islamic faith and practice",
-                "Community and cooperation",
-                "Continuous improvement and growth"
+                t("schoolLife.value1"),
+                t("schoolLife.value2"),
+                t("schoolLife.value3"),
+                t("schoolLife.value4"),
+                t("schoolLife.value5"),
+                t("schoolLife.value6")
               ].map((value, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <span className="text-emerald-600 font-bold">✦</span>

@@ -4,88 +4,91 @@ import { motion } from "framer-motion";
 import { Plus, Minus, Search, HelpCircle, MessageCircle, Phone } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
-const faqs = [
-	{
-		category: "Services",
-		questions: [
-			{
-				q: "What services does Xhenvolt offer?",
-				a: "We provide comprehensive technology solutions including custom software development, mobile app development, UI/UX design, POS systems, school management systems, and process automation. Our expertise spans across web applications, enterprise solutions, and digital transformation consulting.",
-			},
-			{
-				q: "Do you work with international clients?",
-				a: "Yes, while we're based in Uganda, we serve clients across Africa and internationally. Our remote collaboration tools and project management systems enable us to work effectively with clients worldwide.",
-			},
-			{
-				q: "What industries do you specialize in?",
-				a: "We work across various industries including education, retail, healthcare, construction, finance (SACCOs), agriculture, and manufacturing. Our solutions are tailored to meet specific industry requirements and compliance standards.",
-			},
-		],
-	},
-	{
-		category: "Process",
-		questions: [
-			{
-				q: "How do I request a demo or consultation?",
-				a: "You can request a demo by visiting our Contact page, calling us directly at +256 741 341 483, or emailing info@xhenvolt.com. We'll schedule a convenient time to discuss your requirements and demonstrate relevant solutions.",
-			},
-			{
-				q: "What's your typical project timeline?",
-				a: "Project timelines vary based on complexity and scope. Simple websites take 2-4 weeks, mobile apps 6-12 weeks, and enterprise systems 3-6 months. We provide detailed timelines during project planning and keep you updated throughout development.",
-			},
-			{
-				q: "How do you handle project changes and revisions?",
-				a: "We follow an agile development approach with regular check-ins and feedback sessions. Minor changes are included, while major scope changes are discussed and may affect timeline and budget. We maintain transparent communication throughout.",
-			},
-		],
-	},
-	{
-		category: "Support",
-		questions: [
-			{
-				q: "Do you provide support after implementation?",
-				a: "Yes, all our solutions come with comprehensive support packages including technical support, maintenance, updates, and user training. We offer different support tiers based on your needs and budget.",
-			},
-			{
-				q: "How secure are your systems?",
-				a: "Security is our top priority. We implement bank-level security protocols including data encryption, secure hosting, regular security audits, user authentication, and compliance with international security standards like GDPR and ISO 27001.",
-			},
-			{
-				q: "Can you integrate with our existing systems?",
-				a: "Absolutely. We specialize in system integration and can connect our solutions with your existing software, databases, and third-party services through APIs and custom connectors, ensuring seamless data flow.",
-			},
-		],
-	},
-	{
-		category: "Pricing",
-		questions: [
-			{
-				q: "How do you price your services?",
-				a: "We offer flexible pricing models including fixed-price projects, hourly rates, and monthly retainers. Pricing depends on project complexity, timeline, and required features. We provide detailed quotes after understanding your requirements.",
-			},
-			{
-				q: "Do you offer payment plans?",
-				a: "Yes, we offer flexible payment plans for larger projects, typically structured as milestone-based payments. This helps manage cash flow while ensuring project progress and quality delivery.",
-			},
-			{
-				q: "What's included in your maintenance packages?",
-				a: "Our maintenance packages include regular updates, security patches, bug fixes, performance monitoring, backup management, technical support, and user training. Packages are customized based on your system complexity.",
-			},
-		],
-	},
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function FAQPage() {
+	const { t } = useLanguage();
+
+	const faqs = [
+		{
+			category: t("faq.services.title"),
+			questions: [
+				{
+					q: t("faq.services.q1"),
+					a: t("faq.services.a1"),
+				},
+				{
+					q: t("faq.services.q2"),
+					a: t("faq.services.a2"),
+				},
+				{
+					q: t("faq.services.q3"),
+					a: t("faq.services.a3"),
+				},
+			],
+		},
+		{
+			category: t("faq.process.title"),
+			questions: [
+				{
+					q: t("faq.process.q1"),
+					a: t("faq.process.a1"),
+				},
+				{
+					q: t("faq.process.q2"),
+					a: t("faq.process.a2"),
+				},
+				{
+					q: t("faq.process.q3"),
+					a: t("faq.process.a3"),
+				},
+			],
+		},
+		{
+			category: t("faq.support.title"),
+			questions: [
+				{
+					q: t("faq.support.q1"),
+					a: t("faq.support.a1"),
+				},
+				{
+					q: t("faq.support.q2"),
+					a: t("faq.support.a2"),
+				},
+				{
+					q: t("faq.support.q3"),
+					a: t("faq.support.a3"),
+				},
+			],
+		},
+		{
+			category: t("faq.fees.title"),
+			questions: [
+				{
+					q: t("faq.fees.q1"),
+					a: t("faq.fees.a1"),
+				},
+				{
+					q: t("faq.fees.q2"),
+					a: t("faq.fees.a2"),
+				},
+				{
+					q: t("faq.fees.q3"),
+					a: t("faq.fees.a3"),
+				},
+			],
+		},
+	];
 	const [openQuestion, setOpenQuestion] = useState<string | null>(null);
 	const [searchTerm, setSearchTerm] = useState("");
-	const [activeCategory, setActiveCategory] = useState("All");
+	const allText = t("faq.allCategory");
+	const [activeCategory, setActiveCategory] = useState(allText);
 
-	const categories = ["All", ...Array.from(new Set(faqs.map((faq) => faq.category)))];
+	const categories = [allText, ...Array.from(new Set(faqs.map((faq) => faq.category)))];
 
 	const filteredFaqs = faqs.filter(
 		(faq) =>
-			(activeCategory === "All" || faq.category === activeCategory) &&
+			(activeCategory === allText || faq.category === activeCategory) &&
 			(searchTerm === "" ||
 				faq.questions.some(
 					(q) => q.q.toLowerCase().includes(searchTerm.toLowerCase()) || q.a.toLowerCase().includes(searchTerm.toLowerCase())
@@ -106,10 +109,10 @@ export default function FAQPage() {
 						className="text-center max-w-4xl mx-auto"
 					>
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-							Frequently Asked Questions
-						</h1>
-						<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-							Get instant answers to common questions about our services, processes, and support.
+						{t("faq.heroTitle")}
+					</h1>
+					<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+						{t("faq.heroDescription")}
 						</p>
 					</motion.div>
 				</div>
@@ -128,7 +131,7 @@ export default function FAQPage() {
 							<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 							<input
 								type="text"
-								placeholder="Search frequently asked questions..."
+							placeholder={t("faq.searchPlaceholder")}
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
 								className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
@@ -227,9 +230,9 @@ export default function FAQPage() {
 					className="mt-16"
 				>
 					<div className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-						<h2 className="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
+						<h2 className="text-3xl md:text-4xl font-bold mb-6">{t("faq.stillHaveQuestions")}</h2>
 						<p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-							Can&apos;t find what you&apos;re looking for? Our team is here to help with personalized answers to your specific questions.
+							{t("faq.stillHaveQuestionsDesc")}
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<motion.a
@@ -239,7 +242,7 @@ export default function FAQPage() {
 								className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
 							>
 								<MessageCircle className="w-5 h-5" />
-								Send us a Message
+								{t("faq.sendMessage")}
 							</motion.a>
 							<motion.a
 								href="tel:+256741341483"
@@ -248,7 +251,7 @@ export default function FAQPage() {
 								className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
 							>
 								<Phone className="w-5 h-5" />
-								Call Us Now
+								{t("faq.callNow")}
 							</motion.a>
 						</div>
 					</div>

@@ -73,12 +73,12 @@ Added navigation links:
 ### Footer (`src/components/Footer.tsx`)
 Updated contact numbers:
 - **Old**: +256 741 341 483
-- **New Primary**: 0745 726 350
+- **New Primary**: +256 707 153 422
 - **New Secondary**: +256 774 543 406 (WhatsApp/Telegram)
 
 ### Contact Page (`src/app/contact/page.tsx`)
 Updated contact information cards with:
-- Phone: 0745 726 350
+- Phone: +256 707 153 422
 - WhatsApp/Telegram: +256 774 543 406
 - Removed Business Hours card
 

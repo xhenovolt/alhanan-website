@@ -10,7 +10,17 @@
     "schoolLife": "School Life",
     "gallery": "Gallery",
     "location": "Location & Contact",
+    "contact": "Contact",
     "applyNow": "Apply Now",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "caseStudies": "Case Studies",
+    "testimonials": "Testimonials",
+    "services": "Services",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "newsletter": "Newsletter",
+    "moreOptions": "More Options",
     "language": "عربي"
   },
   "common": {

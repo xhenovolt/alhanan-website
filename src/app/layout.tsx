@@ -5,7 +5,7 @@ import "./globals.css";
 import Chatbot from "../components/Chatbot";
 import { LanguageProvider } from "../i18n/LanguageContext";
 import DynamicTranslator from "../components/DynamicTranslator";
-import FloatingLanguageToggle from "../components/FloatingLanguageToggle";
+import MobileBottomNav from "../components/MobileBottomNav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -73,8 +73,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${tajawal.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300`}>
         <LanguageProvider>
           <DynamicTranslator />
-          <FloatingLanguageToggle />
-          <div className="min-h-screen relative overflow-x-hidden">
+          <div className="min-h-screen relative overflow-x-hidden pb-20 lg:pb-0">
             {/* Animated background elements */}
             <div className="fixed inset-0 opacity-20 dark:opacity-10 pointer-events-none">
               <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full filter blur-3xl animate-pulse"></div>
@@ -84,6 +83,10 @@ export default function RootLayout({
               {children}
             </div>
             <Chatbot />
+          </div>
+          {/* Mobile Bottom Navigation - Only visible on mobile */}
+          <div className="lg:hidden">
+            <MobileBottomNav />
           </div>
         </LanguageProvider>
       </body>

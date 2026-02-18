@@ -62,26 +62,82 @@ export default function SchoolLifePage() {
             </p>
           </motion.div>
 
-          {/* Nursery Facilities Image */}
+          {/* School Facilities Overview */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-12"
+            className="mb-12"
           >
-            <Image
-              src="/Alhanan/Alhanan Nursary classes.jpeg"
-              alt="Al Hanan Education Centre Nursery classroom facilities for early childhood education"
-              fill
-              className="object-cover"
-              sizes="100vw"
-              quality={85}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{t("common.nurseryTitle")}</h2>
-              <p className="text-white/90">{t("schoolLife.nurseryDesc")}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Nursery Block */}
+              <div className="relative h-[300px] md:h-[350px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Alhanan/Alhanan Nursary classes.jpeg"
+                  alt="Al Hanan Education Centre Nursery classroom facilities for early childhood education"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={85}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h2 className="text-2xl font-bold text-white mb-2">{t("common.nurseryTitle")}</h2>
+                  <p className="text-white/90">{t("schoolLife.nurseryDesc")}</p>
+                </div>
+              </div>
+              {/* Classroom Block */}
+              <div className="relative h-[300px] md:h-[350px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Alhanan/Classtime1.JPG"
+                  alt="Al Hanan classroom activities and academic engagement"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={85}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h2 className="text-2xl font-bold text-white mb-2">Academic Excellence</h2>
+                  <p className="text-white/90">Interactive learning and scholarly engagement</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Student Activities Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              Student Activities & Moments
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[1, 2, 3].map((idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="relative h-[250px] rounded-2xl overflow-hidden shadow-lg group"
+                >
+                  <Image
+                    src={`/Alhanan/Breaktime${idx}.JPG`}
+                    alt={`Al Hanan student activities during breaktime - moment ${idx}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={85}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 

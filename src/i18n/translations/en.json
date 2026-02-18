@@ -32,8 +32,9 @@
   },
   "hero": {
     "tagline": "Shaping minds, nurturing faith, building the future",
-    "heading": "Premium Islamic Education in Uganda",
-    "description": "Al Hanan Education Centre combines rigorous academics with complete Qur'anic memorization, producing exceptional Muslim leaders.",
+    "heading": "Africa's Premier Islamic Academic Institution",
+    "description": "Al Hanan Education Centre represents the highest standard of Islamic education in East Africa. We combine rigorous academics, complete Qur'anic memorization, and Islamic discipline to produce exceptional Muslim leaders ready to transform their communities.",
+    "credibility": "Ministry of Education Registered • Est. 2019 • 500+ Learners Served",
     "ctaButton": "Explore Our Programs",
     "ctaSecondary": "Schedule a Visit"
   },
@@ -157,12 +158,152 @@
     },
     "quranProgram": "Qur'an Memorization Program",
     "islamicStudiesProgram": "Islamic Studies Program",
-    "primaryEducationProgram": "Primary Education Program"
+    "primaryEducationProgram": "Primary Education Program",
+    "academicProgression": {
+      "title": "Structured Academic Progression",
+      "subtitle": "From Nursery through Primary Seven - A Clear Path to Excellence",
+      "nursery": {
+        "title": "Nursery (Ages 3-5)",
+        "badge": "Early Foundation",
+        "outcomes": [
+          "Building Islamic foundation and Qur'anic familiarity",
+          "Early literacy and numeracy readiness",
+          "Character and discipline formation",
+          "Safe, nurturing environment"
+        ]
+      },
+      "lowerPrimary": {
+        "title": "Lower Primary (Classes 1-4)",
+        "badge": "Foundation Building",
+        "outcomes": [
+          "Beginning Qur'an memorization (typically 2-3 Juz by Class 4)",
+          "Strong English and Arabic language foundation",
+          "Mathematics and foundational sciences",
+          "Islamic values and discipline strengthening"
+        ]
+      },
+      "upperPrimary": {
+        "title": "Upper Primary (Classes 5-6)",
+        "badge": "Excellence Development",
+        "outcomes": [
+          "Advanced Qur'an memorization (typically 10+ Juz by Class 6)",
+          "Advanced English and Arabic proficiency",
+          "Complex Mathematics and Science",
+          "Leadership skills and community awareness"
+        ]
+      },
+      "primarySeven": {
+        "title": "Primary Seven (Final Year)",
+        "badge": "Graduation & Mastery",
+        "outcomes": [
+          "Complete Qur'an Memorization (Full Hifdh)",
+          "National Primary Leaving Examination Excellence",
+          "Fluent English and Arabic Communication",
+          "Ready for Secondary Education Leadership"
+        ]
+      }
+    },
+    "graduationOutcomes": {
+      "title": "Graduation Excellence",
+      "subtitle": "What Al Hanan Graduates Achieve",
+      "outcome1": "100% Qur'anic Memorization Completion",
+      "outcome2": "Average PLE Score: 319+ (Distinction Level)",
+      "outcome3": "100% Transition to Secondary Education",
+      "outcome4": "Leadership Positions in Secondary Schools",
+      "outcome5": "Fluent in English, Arabic, and Local Languages",
+      "outcome6": "Strong Islamic Character and Values"
+    },
+    "academicStandards": {
+      "title": "Academic Excellence Standards",
+      "metric1": "Daily Qur'an study: Minimum 2 hours",
+      "metric2": "Academic rigor: National curriculum + enrichment",
+      "metric3": "Teacher qualification: Minimum diploma level",
+      "metric4": "Class size: Max 35 learners per class",
+      "metric5": "Assessment frequency: Monthly & termly evaluations",
+      "metric6": "Parent communication: Weekly progress updates"
+    }
+  },
+  "welfare": {
+    "pageTitle": "Student Welfare & Environment",
+    "pageDescription": "Discover our comprehensive student welfare system designed to ensure safety, discipline, and holistic development",
+    "heading": "Student Welfare & Learning Environment",
+    "tagline": "Creating a Safe, Structured, Disciplined Space for Excellence",
+    "supervisoryStructure": {
+      "title": "Supervision & Safeguarding Framework",
+      "subtitle": "Every learner is supervised, protected, and nurtured",
+      "point1": "24-hour supervised environment with trained staff",
+      "point2": "Designated welfare officers in each class section",
+      "point3": "Structured break-time and transition supervision",
+      "point4": "Health and safety protocols compliant with Ministry standards",
+      "point5": "Secure compound with controlled access",
+      "point6": "Regular safety audits and improvements"
+    },
+    "disciplineFramework": {
+      "title": "Discipline & Character Formation",
+      "subtitle": "Building Excellence Through Structured Discipline",
+      "description": "Al Hanan's discipline framework is rooted in Islamic values and designed to develop character, not just enforce rules.",
+      "principle1": "Islamic Foundation: All discipline rooted in Qur'anic principles",
+      "principle2": "Progressive System: Age-appropriate expectations and consequences",
+      "principle3": "Restorative Approach: Focus on learning and improvement",
+      "principle4": "Parental Partnership: Parents involved in discipline processes",
+      "principle5": "Zero Tolerance: No bullying, no abuse, no discrimination",
+      "principle6": "Leadership Culture: Discipline builds future leaders"
+    },
+    "spiritualDevelopment": {
+      "title": "Spiritual Development & Religious Formation",
+      "subtitle": "Foundation for Lifelong Islamic Practice",
+      "component1": "Daily Qur'anic Study: Building familiarity with God's word",
+      "component2": "Islamic Theology: Understanding faith and Islamic principles",
+      "component3": "Daily Prayers: Prayer routines integrated into school day",
+      "component4": "Islamic Values: Integrity, honesty, compassion, respect",
+      "component5": "Religious Mentorship: Teachers as spiritual role models",
+      "component6": "Character Awards: Recognition of Islamic values in action"
+    },
+    "safetyProtocols": {
+      "title": "Safety & Security Measures",
+      "subtitle": "Your Child's Security is Our Priority",
+      "security1": "Secured compound with trained security personnel",
+      "security2": "Visitor registration and identification system",
+      "security3": "Health protocols and first aid readiness",
+      "security4": "Emergency response plans and regular drills",
+      "security5": "Staff background checks and vetting",
+      "security6": "Regular safety training for all staff and learners"
+    },
+    "conduciveEnvironment": {
+      "title": "Conducive Learning Atmosphere",
+      "subtitle": "Purpose-Built Facilities for Academic Excellence",
+      "feature1": "Modern, well-maintained classroom facilities",
+      "feature2": "Adequate lighting, ventilation, and temperature control",
+      "feature3": "Clean water, sanitation, and hygiene facilities",
+      "feature4": "Nutritious meal program for learner health",
+      "feature5": "Peaceful environment minimizing distractions",
+      "feature6": "Structured daily schedule enabling focused learning"
+    },
+    "moralFormation": {
+      "title": "Moral & Character Formation Program",
+      "subtitle": "Developing Leaders of Integrity and Excellence",
+      "formation1": "Values-based curriculum integrated across subjects",
+      "formation2": "Regular character-building assemblies and reflections",
+      "formation3": "Leadership opportunities through student committees",
+      "formation4": "Community service projects building empathy",
+      "formation5": "Role models in teachers and administrative staff",
+      "formation6": "Parent-school partnership in values reinforcement"
+    },
+    "parentalSupport": {
+      "title": "Parental Engagement & Communication",
+      "subtitle": "Partnership for Learner Success",
+      "support1": "Weekly progress reports and communication",
+      "support2": "Regular parent-teacher conferences",
+      "support3": "Open-door policy for parent concerns",
+      "support4": "Parenting workshops and resources",
+      "support5": "Parent volunteer opportunities",
+      "support6": "Family celebration events and involvement"
+    }
   },
   "admissions": {
     "pageTitle": "Admissions",
     "pageDescription": "Join Al Hanan Education Centre - Apply now for our comprehensive Islamic education program",
-    "heading": "Join Al Hanan",
+    "heading": "Join Al Hanan Family",
     "description": "Begin your journey in academic excellence and Qur'anic mastery",
     "stepTitle1": "Application",
     "stepDescription1": "Submit your child's application form with required documents",
@@ -170,14 +311,47 @@
     "stepDescription2": "Child assessment in English, Mathematics, and Islamic values",
     "stepTitle3": "Interview & Admission",
     "stepDescription3": "Parent-child interview followed by admission decision",
-    "requirements": "Requirements",
+    "requirements": "Admission Requirements",
     "requirement1": "Birth certificate or national ID",
     "requirement2": "Previous school records (if applicable)",
     "requirement3": "Proof of residence",
     "requirement4": "Health clearance",
     "requirement5": "Assessment in English and Mathematics",
     "callUs": "Call Us",
-    "emailUs": "Email Us"
+    "emailUs": "Email Us",
+    "onlineForm": {
+      "title": "Online Admission Form",
+      "subtitle": "Complete your application form below. We'll review and contact you within 48 hours.",
+      "learnerSection": "Learner Information",
+      "parentSection": "Parent/Guardian Information",
+      "applicationSection": "Application Details",
+      "fullName": "Full Name *",
+      "dateOfBirth": "Date of Birth *",
+      "gender": "Gender *",
+      "currentClass": "Current Class/Level *",
+      "classPlaceholder": "Select the class applying for",
+      "previousSchool": "Previous School (if any)",
+      "enrolmentYear": "Enrolment Year *",
+      "parentGuardian": "Parent/Guardian Name *",
+      "relationship": "Relationship *",
+      "phoneNumber": "Phone Number *",
+      "emailAddress": "Email Address *",
+      "residentialAddress": "Residential Address *",
+      "district": "District *",
+      "parentEmail": "Parent Email Address *",
+      "applicantStatement": "Why does your child want to join Al Hanan? *",
+      "statementPlaceholder": "Tell us about your child's interests and goals",
+      "attachments": "Attachments",
+      "uploadDocuments": "Upload documents (Birth certificate, previous school results, etc.)",
+      "agreeTerms": "I agree to Al Hanan admission terms and conditions *",
+      "submitForm": "Submit Application",
+      "submitting": "Submitting...",
+      "successMessage": "Thank you! Your application has been submitted. We'll contact you within 48 hours.",
+      "errorRequired": "Please fill in all required fields",
+      "errorEmail": "Please enter a valid email address",
+      "errorDocuments": "Please upload required documents",
+      "formStatus": "Form Status"
+    }
   },
   "location": {
     "heading": "Visit Al Hanan",
@@ -457,7 +631,20 @@
     },
     "morePhotosTitle": "More Photos Coming Soon",
     "morePhotosDesc": "We're continuously capturing and sharing moments from our vibrant school community. Check back regularly for updates!",
-    "scheduleVisit": "Schedule a Visit"
+    "scheduleVisit": "Schedule a Visit",
+    "categories": {
+      "all": "All Photos",
+      "facilities": "Facilities & Infrastructure",
+      "academics": "Academic Spaces",
+      "activities": "Activities & Student Life",
+      "events": "School Events",
+      "leadership": "Leadership & Team",
+      "community": "Community Moments"
+    },
+    "lightboxAlt": "Al Hanan Education Centre - Full screen gallery view",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "closeGallery": "Close gallery"
   },
   "blog": {
     "pageTitle": "Blog",

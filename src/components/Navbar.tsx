@@ -58,9 +58,16 @@ export default function Navbar() {
         { name: t("nav.primaryEducation"), href: "/academics#primary" }
       ]
     },
+    {
+      name: "Student Life",
+      href: "/welfare",
+      dropdown: [
+        { name: "Welfare & Environment", href: "/welfare" },
+        { name: t("nav.schoolLife"), href: "/school-life" },
+        { name: t("nav.gallery"), href: "/gallery" }
+      ]
+    },
     { name: t("nav.admissions"), href: "/admissions" },
-    { name: t("nav.schoolLife"), href: "/school-life" },
-    { name: t("nav.gallery"), href: "/gallery" },
     { name: t("nav.location"), href: "/location" }
   ];
 
@@ -90,15 +97,37 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative group">
+                <Link
+                  href={item.href}
+                  className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300 font-medium flex items-center gap-1"
+                >
+                  {item.name}
+                  {item.dropdown && <ChevronDown className="w-4 h-4" />}
+                </Link>
+                
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 0, y: -10 }}
+                    whileHover={{ opacity: 1, y: 0 }}
+                    className="absolute left-0 mt-0 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+                  >
+                    {item.dropdown.map((subitem, idx) => (
+                      <Link
+                        key={idx}
+                        href={subitem.href}
+                        className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200 text-sm font-medium first:pt-4 last:pb-4"
+                      >
+                        {subitem.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
             ))}
           </div>
 
@@ -123,10 +152,12 @@ export default function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="hidden md:block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Link
                 href="/admissions"
-                className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
               >
                 {t("nav.applyNow")}
               </Link>

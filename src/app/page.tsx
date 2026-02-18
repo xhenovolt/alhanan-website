@@ -226,6 +226,69 @@ export default function HomePage() {
 				</div>
 			</section>
 
+		{/* Credibility & Institutional Markers */}
+		<section className="py-12 md:py-16 border-y border-emerald-100 dark:border-emerald-900/30 bg-white/50 dark:bg-gray-800/30">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6">
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="text-center"
+					>
+						<div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-2">
+							2019
+						</div>
+						<p className="text-sm md:text-base text-gray-600 dark:text-gray-300 font-semibold">
+							Founded with Vision
+						</p>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.1 }}
+						className="text-center"
+					>
+						<div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
+							500+
+						</div>
+						<p className="text-sm md:text-base text-gray-600 dark:text-gray-300 font-semibold">
+							Learners Served
+						</p>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.2 }}
+						className="text-center"
+					>
+						<div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent mb-2">
+							100%
+						</div>
+						<p className="text-sm md:text-base text-gray-600 dark:text-gray-300 font-semibold">
+							Registered Ministry
+						</p>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.3 }}
+						className="text-center"
+					>
+						<div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+							319+
+						</div>
+						<p className="text-sm md:text-base text-gray-600 dark:text-gray-300 font-semibold">
+							Average PLE Distinction
+						</p>
+					</motion.div>
+				</div>
+			</div>
+		</section>
+
 		{/* Features Section */}
 		<section className="py-12 sm:py-16 md:py-20" id="why-al-hanan">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -269,6 +332,78 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
+
+		{/* Student Life & Activities Showcase */}
+		<section className="py-12 sm:py-16 md:py-20">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6">
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+					className="text-center mb-12 sm:mb-16"
+				>
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+						Life at Al Hanan
+					</h2>
+					<p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+						More than academics—our learners develop as complete individuals through structured activities, holistic development, and Islamic values
+					</p>
+				</motion.div>
+
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+					{[1, 2, 3].map((idx) => (
+						<motion.div
+							key={idx}
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: idx * 0.1 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src={`/Alhanan/Breaktime${idx}.JPG`}
+								alt={`Al Hanan students in recreational and developmental activities - moment ${idx}`}
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 via-emerald-900/40 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold text-lg">{["Student Activities", "Peer Interaction", "Creative Play"][idx - 1]}</h3>
+							</div>
+						</motion.div>
+					))}
+				</div>
+
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+					{[4, 5].map((idx) => (
+						<motion.div
+							key={idx}
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: idx * 0.1 }}
+							className="relative h-[250px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src={`/Alhanan/Breaktime${idx}.JPG`}
+								alt={`Al Hanan school environment and student engagement - scene ${idx}`}
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 50vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold text-lg">{["Collaborative Learning", "Physical Development"][idx - 4]}</h3>
+							</div>
+						</motion.div>
+					))}
+				</div>
+			</div>
+		</section>
 
 		{/* Solutions Showcase */}
 		<section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-500">

@@ -198,6 +198,152 @@ export default function AboutPage() {
 				</div>
 			</section>
 
+			{/* Institutional Highlights Photo Gallery */}
+			<section className="py-12 md:py-20">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6">
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="text-center mb-12"
+					>
+						<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+							Excellence in Every Detail
+						</h2>
+						<p className="text-gray-600 dark:text-gray-300">
+							From world-class facilities to disciplined learning environments
+						</p>
+					</motion.div>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src="/Alhanan/CompoundGroundView01.JPG"
+								alt="Al Hanan Education Centre campus overview"
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold">Modern Infrastructure</h3>
+							</div>
+						</motion.div>
+
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.1 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src="/Alhanan/Classtime3.JPG"
+								alt="Al Hanan classroom excellence and structured learning environment"
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold">Academic Excellence</h3>
+							</div>
+						</motion.div>
+
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.2 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src="/Alhanan/Orientation2.JPG"
+								alt="Al Hanan orientation and student engagement programs"
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold">Holistic Development</h3>
+							</div>
+						</motion.div>
+
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.3 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src="/Alhanan/NursaryBlock1.JPG"
+								alt="Al Hanan nursery facilities providing early childhood care"
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold">Nurturing Care</h3>
+							</div>
+						</motion.div>
+
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.4 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src="/Alhanan/Breaktime6.JPG"
+								alt="Al Hanan student wellness and extracurricular activities"
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold">Student Wellness</h3>
+							</div>
+						</motion.div>
+
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.5 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+						>
+							<Image
+								src="/Alhanan/Secondary2.JPG"
+								alt="Al Hanan secondary school facilities and upper-level learning spaces"
+								fill
+								className="object-cover group-hover:scale-110 transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 33vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+								<h3 className="font-bold">Advanced Facilities</h3>
+							</div>
+						</motion.div>
+					</div>
+				</div>
+			</section>
+
 			{/* Why Al Hanan Learners Are Different */}
 			<section className="py-12 md:py-20 bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-500">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6">

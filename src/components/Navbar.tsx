@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
@@ -87,9 +88,14 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
+              <Image
+                src="/AlhananLogo.png"
+                alt="Al Hanan Education Centre Logo"
+                width={40}
+                height={40}
+                className="rounded-xl object-contain"
+                priority
+              />
               <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
                 Al Hanan
               </span>

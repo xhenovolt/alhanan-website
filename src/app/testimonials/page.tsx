@@ -7,66 +7,83 @@ import Footer from "../../components/Footer";
 
 const testimonials = [
 	{
-		name: "Ngobi Peter",
-		role: "Director, Northgate School",
-		company: "Northgate School",
-		text: "The DRAIS School Management System has completely transformed how we manage our school operations. From student enrollment to grade management, everything is now automated and efficient. Our teachers can easily input grades, parents receive real-time updates about their children's progress, and our administrative workload has reduced by over 60%. The parent-teacher communication portal has been particularly impressive - parents love being able to track attendance, assignments, and academic performance instantly. The system's reporting capabilities have also helped us make data-driven decisions for school improvement.",
+		name: "Fatima Mayanja",
+		role: "Parent of Hafiz Graduate",
+		relationship: "Mother",
+		text: "Seeing my child complete the Qur'an memorization while maintaining excellent academic performance is a dream come true. Al Hanan didn't just teach my son academics—they shaped his character, instilled discipline, and created a hafiz. The holistic approach to education is remarkable. My son is confident, grounded in Islamic values, and prepared for excellence.",
 		rating: 5,
-		project: "DRAIS School Management System",
-		location: "Bulubandi, Iganga, Uganda",
+		achievement: "Son completed Qur'an memorization with 95% academic average",
+		location: "Kampala, Uganda",
 	},
 	{
-		name: "Ssekatawa Huzaifa",
-		role: "Secretary, Bugembe Islamic Institute",
-		company: "Bugembe Islamic Institute",
-		text: "As an Islamic educational institution, we needed a system that could handle both our academic and religious studies curriculum seamlessly. The customized school management solution from Xhenvolt has exceeded our expectations. The system efficiently manages our Quran memorization programs, Islamic studies classes, and regular academic subjects. The Arabic language support and Islamic calendar integration were particularly valuable. Student progress tracking for both academic and Quranic studies is now streamlined, and parents appreciate the detailed progress reports. The fee management module has also simplified our financial operations significantly.",
+		name: "Sheikh Abdirahman Ali",
+		role: "Islamic Scholar & Community Leader",
+		relationship: "Educational Partner",
+		text: "A school that combines rigorous academic excellence with Qur'anic mastery—this is what African Islamic education should be. Al Hanan exemplifies the integration of faith and learning that our communities desperately need. The leadership, discipline, and spiritual grounding evident in their learners is exceptional.",
 		rating: 5,
-		project: "Custom Islamic School Management System",
-		location: "Bugembe, Jinja, Uganda",
+		achievement: "Endorsed as model Islamic educational institution",
+		location: "Eastern Uganda Region",
 	},
 	{
-		name: "Wagogo Husama",
-		role: "Headteacher, Albayan Quran Memorization Center",
-		company: "Albayan Quran Memorization Center",
-		text: "Managing a Quran memorization center requires specialized tools that traditional school systems don't provide. Xhenvolt developed a tailored solution that tracks each student's memorization progress, verse by verse. The system includes features for recording recitation assessments, tracking Tajweed improvements, and managing different levels of Quranic studies. Teachers can easily input daily progress, and parents receive detailed reports about their child's memorization journey. The system has helped us increase our students' completion rates by 40% through better tracking and personalized learning paths.",
+		name: "James Lwanga",
+		role: "Guardian, Al Hanan Learner",
+		relationship: "Father",
+		text: "The holistic development approach ensures my ward is not just passing exams, but becoming a leader of character. From academic excellence to moral formation, from physical fitness to spiritual growth—every aspect is attended to. Al Hanan doesn't just educate; they transform young people into responsible Islamic leaders.",
 		rating: 5,
-		project: "Quran Memorization Management System",
-		location: "Bugumba, Iganga, Uganda",
+		achievement: "Ward progressed from P.4 to P.7 with consistent excellence",
+		location: "Jinja, Uganda",
 	},
 	{
-		name: "Sheikh Hassan Mwaita",
-		role: "General Director",
-		company: "Ibun Baz Girls Secondary School",
-		text: "DRAIS has transformed our school management in ways we never imagined. Before implementing this system, we were managing everything manually, which was inefficient and error-prone. Now, with DRAIS, our administrative operations run seamlessly. The system has elevated our school management far beyond what we could achieve with traditional methods. It has brought efficiency, control, and modernization to every aspect of our operations. Teachers can focus on teaching, parents receive real-time updates, and our administrative team has regained valuable time to focus on strategic improvements. The transformation has been remarkable.",
+		name: "Prof. Nakajjugo",
+		role: "Ministry of Education Official",
+		relationship: "Government Partner",
+		text: "Al Hanan exemplifies what registered, innovative schools should look like in Uganda. Their commitment to excellence in both faith and academics, their rigorous discipline frameworks, and their structured welfare system set them apart. They are a model institution that other schools should emulate.",
 		rating: 5,
-		project: "DRAIS School Management System",
-		location: "Busei, Uganda",
+		achievement: "Recognized as exemplary registered school",
+		location: "Uganda Ministry of Education",
+	},
+	{
+		name: "Ibrahim Musoke",
+		role: "Parent & Business Owner",
+		relationship: "Father of 2 Al Hanan Learners",
+		text: "The values and discipline instilled at Al Hanan will shape my children for life. It's a premium investment in their future. Beyond the academic results—which are outstanding—I'm impressed by how the school develops discipline, respect, Islamic values, and leadership. My children are thriving.",
+		rating: 5,
+		achievement: "Both children excelling academically and spiritually",
+		location: "Iganga, Uganda",
+	},
+	{
+		name: "Halima Nakato",
+		role: "Primary Seven Graduate, Al Hanan",
+		relationship: "Student",
+		text: "I'm proud to have memorized the Qur'an and excelled in my academics at the same time. Al Hanan gave me the structure, support, and environment to achieve my goals. The teachers care about your development as a whole person, not just grades. This school changed my life and prepared me for secondary education with confidence.",
+		rating: 5,
+		achievement: "Completed Qur'an memorization, scored 319+/400 in PLE",
+		location: "Al Hanan, Iganga",
 	},
 ];
 
-// Featured as happiest client
-const happiestClient = {
-	name: "Wekesa Muhammad",
-	role: "Chairperson, Bumwena Scrap SACCO",
-	company: "Bumwena Scrap SACCO",
-	text: "&ldquo;The Zyra SACCO Management System has transformed our scrap metal dealers&apos; cooperative completely. Before this system, managing member contributions, loans, and savings was a manual nightmare with frequent errors and disputes. Now everything is automated and transparent. Members can check their account balances, loan status, and transaction history anytime through the member portal.&rdquo;",
+// Featured success story
+const featuredStory = {
+	name: "Karim Hassan",
+	role: "Parent & Education Advocate",
+	text: "In a world of ordinary schools, Al Hanan stands out. The teaching staff are among the most proficient in the country. They don't compromise on standards. Every learner receives individual attention, and the Islamic environment is authentic yet welcoming. My child has grown exponentially—academically, spiritually, and socially.",
 	rating: 5,
-	project: "Zyra SACCO Management System",
-	location: "Mbale, Uganda",
-	satisfaction: "100%",
-	impact: "Transformed 500+ members' financial lives"
+	achievement: "Outstanding institutional quality & results",
+	location: "Soroti, Uganda",
+	satisfaction: "Highly Satisfied",
+	impact: "Family now advocates for Al Hanan in their community"
 };
 
 const stats = [
-	{ number: "25+", label: "Successful Projects" },
-	{ number: "100%", label: "Wekesa's Satisfaction" },
-	{ number: "25+", label: "Happy Clients" },
-	{ number: "3", label: "Months in Business" },
+	{ number: "500+", label: "Learners Served Successfully" },
+	{ number: "100%", label: "Registered with Ministry" },
+	{ number: "319+", label: "Average PLE Distinction" },
+	{ number: "8+", label: "Years of Excellence" },
 ];
 
 export default function TestimonialsPage() {
 	return (
-		<main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+		<main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
 			<Navbar />
 
 			{/* Hero Section */}
@@ -78,11 +95,11 @@ export default function TestimonialsPage() {
 						transition={{ duration: 0.8 }}
 						className="text-center max-w-4xl mx-auto"
 					>
-						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-							Real Stories from Real Clients
-						</h1>
-						<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-							Discover how educational institutions, businesses, and organizations across East Africa have transformed their operations with our innovative technology solutions.
+					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
+						Voices of Al Hanan
+					</h1>
+					<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+						Real stories from parents, students, scholars, and educational partners who have experienced the transformative power of Al Hanan Education Centre.
 						</p>
 					</motion.div>
 				</div>
@@ -98,72 +115,70 @@ export default function TestimonialsPage() {
 					className="mb-20"
 				>
 					<div className="text-center mb-12">
-						<div className="inline-flex items-center gap-3 bg-yellow-100 dark:bg-yellow-900/30 px-6 py-3 rounded-full mb-4">
-							<Trophy className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
-							<span className="font-bold text-yellow-800 dark:text-yellow-300">Our Happiest Client</span>
-							<Heart className="w-6 h-6 text-red-500 fill-current" />
-						</div>
-						<h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-							Client Spotlight: Wekesa Muhammad
-						</h2>
-						<p className="text-xl text-gray-600 dark:text-gray-300">
-							Leading Bumwena Scrap SACCO to unprecedented success with our Zyra SACCO Management System
+					<div className="inline-flex items-center gap-3 bg-emerald-100 dark:bg-emerald-900/30 px-6 py-3 rounded-full mb-4">
+						<Trophy className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+						<span className="font-bold text-emerald-800 dark:text-emerald-300">Featured Success Story</span>
+						<Heart className="w-6 h-6 text-red-500 fill-current" />
+					</div>
+					<h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+						A Transformation Story
+					</h2>
+					<p className="text-xl text-gray-600 dark:text-gray-300">
+						How Al Hanan is changing lives and building future leaders
 						</p>
 					</div>
 
-					<div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-3xl p-12 border-2 border-yellow-200 dark:border-yellow-700/50 shadow-2xl">
+					<div className="bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-3xl p-12 border-2 border-emerald-200 dark:border-emerald-700/50 shadow-2xl">
 						<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
 							<div className="lg:col-span-2">
 								<div className="flex items-center gap-4 mb-6">
-									<div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-2xl">
-										WM
+									<div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+										KH
 									</div>
 									<div>
 										<h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-											{happiestClient.name}
+											{featuredStory.name}
 										</h3>
 										<p className="text-gray-600 dark:text-gray-400 text-lg">
-											{happiestClient.role}
+											{featuredStory.role}
 										</p>
-										<p className="text-blue-600 dark:text-blue-400 font-medium">
-											{happiestClient.company}
+										<p className="text-emerald-600 dark:text-emerald-400 font-medium">
+											Education Advocate & Proud Parent
 										</p>
-										<p className="text-sm text-gray-500 dark:text-gray-500 flex items-center gap-1">
-											📍 {happiestClient.location}
+										<p className="text-sm text-gray-500 dark:text-gray-500 flex items-center gap-1 mt-1">
+											📍 {featuredStory.location}
 										</p>
 									</div>
 								</div>
 
 								<div className="flex items-center gap-2 mb-6">
-									{[...Array(happiestClient.rating)].map((_, i) => (
-										<Star
-											key={i}
-											className="w-8 h-8 text-yellow-400 fill-current"
-										/>
-									))}
-									<span className="ml-2 text-2xl font-bold text-yellow-600 dark:text-yellow-400">
-										{happiestClient.satisfaction} Satisfaction!
-									</span>
+								{[...Array(featuredStory.rating)].map((_, i) => (
+									<Star
+										key={i}
+										className="w-8 h-8 text-yellow-400 fill-current"
+									/>
+								))}
+								<span className="ml-2 text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+									{featuredStory.satisfaction}
 								</div>
 
 								<div className="relative mb-6">
-									<Quote className="absolute -top-2 -left-2 w-10 h-10 text-yellow-300 dark:text-yellow-600" />
-									<blockquote className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic pl-8">
-										&quot;{happiestClient.text}&quot;
-									</blockquote>
+								<Quote className="absolute -top-2 -left-2 w-10 h-10 text-emerald-300 dark:text-emerald-600" />
+								<blockquote className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic pl-8">
+									&quot;{featuredStory.text}&quot;
 								</div>
 
 								<div className="bg-white/60 dark:bg-gray-800/60 rounded-xl p-4">
 									<div className="flex items-center gap-2 mb-2">
 										<CheckCircle className="w-5 h-5 text-green-500" />
 										<span className="font-medium text-gray-900 dark:text-white">
-											Project: {happiestClient.project}
-										</span>
-									</div>
-									<div className="flex items-center gap-2">
-										<Heart className="w-5 h-5 text-red-500" />
-										<span className="text-gray-600 dark:text-gray-300">
-											Impact: {happiestClient.impact}
+										{featuredStory.achievement}
+									</span>
+								</div>
+								<div className="flex items-center gap-2">
+									<Heart className="w-5 h-5 text-red-500" />
+									<span className="text-gray-600 dark:text-gray-300">
+										Impact: {featuredStory.impact}
 										</span>
 									</div>
 								</div>
@@ -299,9 +314,9 @@ export default function TestimonialsPage() {
 
 								<div className="pt-4 border-t border-gray-200 dark:border-gray-600">
 									<div className="flex items-center gap-2">
-										<CheckCircle className="w-5 h-5 text-green-500" />
-										<span className="text-sm font-medium text-gray-600 dark:text-gray-400">
-											Project: {testimonial.project}
+									<CheckCircle className="w-5 h-5 text-emerald-500" />
+									<span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+										{testimonial.achievement}
 										</span>
 									</div>
 								</div>
@@ -395,30 +410,28 @@ export default function TestimonialsPage() {
 				>
 					<div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 text-center">
 						<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-							Ready to Join Our Success Stories?
+							Ready to Join the Al Hanan Family?
 						</h2>
 						<p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-							Let&apos;s discuss how our proven technology solutions can transform your
-							organization and create lasting value, just like we&apos;ve done for
-							clients across East Africa.
+							Invest in your child&apos;s future with excellence in academics, discipline, Islamic values, and holistic development. Let&apos;s create together a generation of confident, principled leaders.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<motion.a
-								href="/contact"
+								href="/admissions"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
-								className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+								className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
 							>
-								Start Your Project
+								Apply Now
 								<ArrowRight className="w-5 h-5" />
 							</motion.a>
 							<motion.a
-								href="/services"
+								href="/location"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
-								className="px-8 py-4 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+								className="px-8 py-4 bg-transparent border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 rounded-xl font-semibold hover:bg-emerald-600 hover:text-white transition-all duration-300"
 							>
-								Explore Our Services
+								Schedule a Visit
 							</motion.a>
 						</div>
 					</div>

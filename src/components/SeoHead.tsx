@@ -15,7 +15,7 @@ export default function SeoHead({
   title,
   description,
   url,
-  ogImage = "/og-image.png",
+  ogImage = "/AlhananLogo.png",
   ogTitle,
   ogDescription,
   jsonLd,

@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://alhanan.ug",
   },
+  icons: {
+    icon: "/AlhananLogo.png",
+    apple: "/AlhananLogo.png",
+    shortcut: "/AlhananLogo.png",
+  },
   openGraph: {
     title: "Al Hanan Education Centre | Premium Muslim School",
     description: "Shaping minds, nurturing faith, building the future",
@@ -37,11 +42,18 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Al Hanan Education Centre",
     url: "https://alhanan.ug",
+    images: {
+      url: "/AlhananLogo.png",
+      width: 1200,
+      height: 800,
+      alt: "Al Hanan Education Centre Logo",
+    },
   },
   twitter: {
     card: "summary_large_image",
     title: "Al Hanan Education Centre | Premium Muslim School",
     description: "Shaping minds, nurturing faith, building the future",
+    images: "/AlhananLogo.png",
   },
   robots: {
     index: true,

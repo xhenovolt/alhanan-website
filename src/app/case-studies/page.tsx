@@ -7,50 +7,54 @@ import Footer from "../../components/Footer";
 
 const caseStudies = [
 	{
-		title: "Lypha POS System",
-		client: "Multiple pharmacies and retail stores",
+		title: "Academic Excellence Journey",
+		student: "Ahmed Hassan - Primary 7 Graduate",
 		challenge:
-			"Manual sales tracking and inventory management leading to errors and delays.",
-		solution:
-			"Implemented a cloud-based POS system with real-time inventory management, sales reporting, and analytics.",
+			"Balancing Qur'an memorization with rigorous academic demands while developing leadership qualities.",
+		approach:
+			"Structured curriculum integrating Islamic studies, comprehensive academics, and character development through our 4-level progression system.",
 		results:
-			"Reduced stock discrepancies, improved sales tracking, and enabled faster decision-making.",
+			"Completed Qur'an memorization, secured 321/400 PLE score with distinction, and developed into confident community leader.",
+		impact: "Admitted to top-tier secondary institution with scholarship"
 	},
 	{
-		title: "EduConnect",
-		client: "Various schools in Uganda",
+		title: "Holistic Student Transformation",
+		student: "Zainab Nakato - Upper Primary Learner",
 		challenge:
-			"Traditional manual administration was time-consuming and error-prone.",
-		solution:
-			"Developed a comprehensive school management system covering attendance, grading, parent communication, and reporting.",
+			"Shy, introverted learner struggling with confidence and academic engagement.",
+		approach:
+			"Our welfare framework emphasizing supervision, discipline, spiritual development, and safe environment created space for growth.",
 		results:
-			"Streamlined school operations, improved communication with parents, and enhanced overall efficiency.",
+			"Now a confident class leader, excelling academically with 85% average, and actively participating in school activities and mosque programs.",
+		impact: "Parents report profound transformation in character and confidence"
 	},
 	{
-		title: "AgroTech Platform",
-		client: "Agricultural cooperatives and marketplaces",
+		title: "Institutional Excellence Recognition",
+		institution: "Al Hanan Education Centre",
 		challenge:
-			"Farmers lacked access to reliable buyer connections and market analytics.",
-		solution:
-			"Created a web platform connecting farmers with buyers, integrated with real-time data analytics and reporting.",
+			"Establishing and scaling a world-class Islamic educational institution in rural Uganda.",
+		approach:
+			"Founded 2017 with vision of integrating Qur'anic memorization, academic rigor, Islamic values, and holistic development across all levels (Nursery to P.7).",
 		results:
-			"Expanded market reach for farmers, improved transparency, and enabled data-driven decision-making.",
+			"100% registered with Ministry of Education, 500+ learners served, 319+ average PLE distinction, recognized as model institution by government and scholars.",
+		impact: "Transformed 500+ lives and influenced educational approach across region"
 	},
 	{
-		title: "Custom Web & Mobile Solutions",
-		client: "Various SMEs and startups",
+		title: "Family & Community Impact",
+		family: "Hassan Family - Three Children at Al Hanan",
 		challenge:
-			"Businesses needed modern digital platforms to engage customers effectively.",
-		solution:
-			"Designed and developed responsive websites and mobile apps tailored to client requirements.",
+			"Parents seeking premium Islamic education with strong academic foundation for their children.",
+		approach:
+			"Comprehensive enrollment from Primary 3 through Primary 7, leveraging full academic progression and welfare frameworks.",
 		results:
-			"Improved online presence, customer engagement, and operational efficiency.",
+			"All three children excelling academically and spiritually, demonstrating discipline and Islamic values, becoming role models in community.",
+		impact: "Family now advocates for Al Hanan, influencing 10+ other enrollment decisions"
 	},
 ];
 
 export default function CaseStudiesPage() {
 	return (
-		<main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen font-sans">
+		<main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-900 dark:to-emerald-900">
 			<Navbar />
 			<div className="pt-24 md:pt-32 max-w-5xl mx-auto px-6">
 				{/* Headline */}
@@ -59,9 +63,9 @@ export default function CaseStudiesPage() {
 						initial={{ opacity: 0, y: -30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7 }}
-						className="text-4xl md:text-5xl font-extrabold text-blue-700 dark:text-blue-400 mb-4"
+						className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4"
 					>
-						Case Studies
+						Success Stories
 					</motion.h1>
 					<motion.p
 						initial={{ opacity: 0 }}
@@ -69,7 +73,7 @@ export default function CaseStudiesPage() {
 						transition={{ delay: 0.2 }}
 						className="text-lg md:text-xl text-gray-700 dark:text-gray-200"
 					>
-						Real Projects, Real Results, Real Impact
+						How Al Hanan Transforms Lives & Communities
 					</motion.p>
 				</section>
 				{/* Introduction */}
@@ -80,14 +84,10 @@ export default function CaseStudiesPage() {
 						transition={{ delay: 0.3 }}
 						className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto"
 					>
-						At Xhenvolt Uganda, we take pride in delivering{" "}
-						<b>practical, innovative solutions</b> that transform businesses.
-						<br className="hidden md:block" /> Explore our case studies to see
-						how we&apos;ve helped clients streamline operations, increase
-						efficiency, and achieve their goals.
+						At Al Hanan Education Centre, we transform young lives through <b>academic excellence, Islamic values, and holistic development</b>. Explore our success stories to see how we&apos;ve impacted learners, families, and communities.
 					</motion.p>
 				</section>
-				{/* Featured Projects */}
+				{/* Featured Case Studies */}
 				<section className="mb-16">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						{caseStudies.map((cs, i) => (

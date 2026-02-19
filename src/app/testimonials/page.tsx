@@ -160,15 +160,11 @@ export default function TestimonialsPage() {
 								))}
 								<span className="ml-2 text-2xl font-bold text-emerald-600 dark:text-emerald-400">
 									{featuredStory.satisfaction}
-								</div>
-
-								<div className="relative mb-6">
+							</span>
 								<Quote className="absolute -top-2 -left-2 w-10 h-10 text-emerald-300 dark:text-emerald-600" />
 								<blockquote className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic pl-8">
 									&quot;{featuredStory.text}&quot;
-								</div>
-
-								<div className="bg-white/60 dark:bg-gray-800/60 rounded-xl p-4">
+						</blockquote>
 									<div className="flex items-center gap-2 mb-2">
 										<CheckCircle className="w-5 h-5 text-green-500" />
 										<span className="font-medium text-gray-900 dark:text-white">
@@ -304,7 +300,7 @@ export default function TestimonialsPage() {
 											{testimonial.role}
 										</p>
 										<p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
-											{testimonial.company}
+											{testimonial.relationship}
 										</p>
 										<p className="text-sm text-gray-500 dark:text-gray-500">
 											📍 {testimonial.location}

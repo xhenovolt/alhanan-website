@@ -107,7 +107,7 @@ export default function CaseStudiesPage() {
 									{cs.title}
 								</h3>
 								<div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-									<b>Client:</b> {cs.client}
+									<b>{"student" in cs ? "Student:" : "institution" in cs ? "Institution:" : "Family:"}</b> {"student" in cs ? cs.student : "institution" in cs ? cs.institution : cs.family}
 								</div>
 								<div className="mb-1">
 									<b>Challenge:</b>{" "}
@@ -116,9 +116,9 @@ export default function CaseStudiesPage() {
 									</span>
 								</div>
 								<div className="mb-1">
-									<b>Solution:</b>{" "}
+									<b>Approach:</b>{" "}
 									<span className="text-gray-700 dark:text-gray-200">
-										{cs.solution}
+										{cs.approach}
 									</span>
 								</div>
 								<div>

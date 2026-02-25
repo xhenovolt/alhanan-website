@@ -56,7 +56,8 @@ export default function Navbar() {
       dropdown: [
         { name: t("nav.quranMemorization"), href: "/academics#quran" },
         { name: t("nav.islamicStudies"), href: "/academics#islamic" },
-        { name: t("nav.primaryEducation"), href: "/academics#primary" }
+        { name: t("nav.primaryEducation"), href: "/academics#primary" },
+        { name: t("nav.classtime"), href: "/classtime" }
       ]
     },
     {
@@ -68,7 +69,7 @@ export default function Navbar() {
         { name: t("nav.gallery"), href: "/gallery" }
       ]
     },
-    { name: t("nav.admissions"), href: "/admissions" },
+    { name: t("nav.administration"), href: "/administration" },
     { name: t("nav.location"), href: "/location" }
   ];
 

@@ -21,7 +21,9 @@
     "termsOfService": "Terms of Service",
     "newsletter": "Newsletter",
     "moreOptions": "More Options",
-    "language": "عربي"
+    "language": "عربي",
+    "classtime": "Class Time",
+    "administration": "Administration"
   },
   "common": {
     "language": "Language",
@@ -832,5 +834,149 @@
   },
   "terms": {
     "pageTitle": "Terms of Service"
+  },
+  "classtime": {
+    "badge": "Daily Schedule",
+    "heading": "Class Time & Daily Schedule",
+    "description": "Experience our structured daily routine combining academic excellence with Qur'anic memorization",
+    "stats": {
+      "subjects": "8+",
+      "subjectsDesc": "Core Subjects",
+      "dailyHours": "7+",
+      "dailyHoursDesc": "Hours of Learning",
+      "hifdh": "Daily",
+      "hifdhDesc": "Qur'an Memorization"
+    },
+    "ourClasses": "Our Class Levels",
+    "ourClassesDesc": "Each class follows a structured curriculum tailored to the developmental stage and learning objectives",
+    "nursery": {
+      "title": "Nursery",
+      "description": "Building Islamic foundation and Qur'anic familiarity through play-based learning",
+      "age": "Ages 3-5",
+      "students": "Young Learners"
+    },
+    "primaryOne": {
+      "title": "Primary One",
+      "description": "Beginning Qur'an memorization with foundational academic skills",
+      "age": "Ages 6-7",
+      "students": "Class 1"
+    },
+    "primaryTwo": {
+      "title": "Primary Two",
+      "description": "Continuing memorization journey with emerging literacy skills",
+      "age": "Ages 7-8",
+      "students": "Class 2"
+    },
+    "primaryThree": {
+      "title": "Primary Three",
+      "description": "Building momentum in Hifdh with strong academic foundation",
+      "age": "Ages 8-9",
+      "students": "Class 3"
+    },
+    "primaryFour": {
+      "title": "Primary Four",
+      "description": "Advanced memorization with comprehensive curriculum coverage",
+      "age": "Ages 9-10",
+      "students": "Class 4"
+    },
+    "primaryFive": {
+      "title": "Primary Five",
+      "description": "Excellence in academics and continued Qur'anic progress",
+      "age": "Ages 10-11",
+      "students": "Class 5"
+    },
+    "primarySix": {
+      "title": "Primary Six",
+      "description": "Advanced studies preparing for primary leaving examinations",
+      "age": "Ages 11-12",
+      "students": "Class 6"
+    },
+    "primarySeven": {
+      "title": "Primary Seven",
+      "description": "Final year: Complete Hifdh and prepare for secondary education",
+      "age": "Ages 12-13",
+      "students": "Class 7"
+    },
+    "cta": {
+      "title": "Ready to Join Al Hanan?",
+      "description": "Enroll your child today and give them the gift of Qur'anic mastery and academic excellence.",
+      "apply": "Apply Now",
+      "contact": "Contact Us"
+    }
+  },
+  "administration": {
+    "badge": "School Leadership",
+    "heading": "Administration & Leadership",
+    "description": "Meet our dedicated team of educators and student leaders committed to excellence",
+    "leadership": {
+      "title": "Leadership Team",
+      "subtitle": "Our experienced administrators guide the school with vision and commitment",
+      "headteacher": {
+        "name": "Naminya Aslam",
+        "role": "Headteacher",
+        "bio": "Visionary educational leader guiding Al Hanan Education Centre with excellence, discipline, and commitment to Islamic values and academic achievement.",
+        "specialty1": "Educational Leadership",
+        "specialty2": "School Management",
+        "specialty3": "Academic Excellence"
+      },
+      "director": {
+        "name": "Faisal Naminya",
+        "role": "School Center Director",
+        "bio": "Dynamic director overseeing school operations, ensuring conducive learning environment and seamless coordination of all school activities and programs.",
+        "specialty1": "Operations Management",
+        "specialty2": "Strategic Planning",
+        "specialty3": "Center Coordination"
+      },
+      "dos": {
+        "name": "Ganiyu Kule Hussein",
+        "role": "Director Of Studies - Upper Primary",
+        "bio": "Experienced educator dedicated to delivering rigorous academics and Qur'anic excellence for upper primary learners, fostering discipline and intellectual growth.",
+        "specialty1": "Curriculum Development",
+        "specialty2": "Academic Strategy",
+        "specialty3": "Upper Primary Education"
+      },
+      "dosLower": {
+        "name": "Wotali Hadijja",
+        "role": "Director Of Studies - Lower Primary",
+        "bio": "Nurturing educator focused on foundational learning and character development in lower primary, creating engaging and supportive learning experiences.",
+        "specialty1": "Primary Education",
+        "specialty2": "Foundational Learning",
+        "specialty3": "Student Development"
+      }
+    },
+    "prefects": {
+      "title": "Prefect System",
+      "subtitle": "Developing future leaders through student governance and responsibility",
+      "headPrefect": {
+        "title": "Head Prefect",
+        "description": "Leads the student body and represents learners in school matters"
+      },
+      "deputyPrefect": {
+        "title": "Deputy Head Prefect",
+        "description": "Supports the head prefect and assumes leadership when needed"
+      },
+      "academicPrefect": {
+        "title": "Academic Prefect",
+        "description": "Promotes academic excellence and organizes study initiatives"
+      },
+      "disciplinePrefect": {
+        "title": "Discipline Prefect",
+        "description": "Maintains school discipline and enforces rules fairly"
+      },
+      "welfarePrefect": {
+        "title": "Welfare Prefect",
+        "description": "Ensures student well-being and organizes welfare activities"
+      },
+      "sportsPrefect": {
+        "title": "Sports Prefect",
+        "description": "Organizes sports activities and promotes physical fitness"
+      }
+    },
+    "cta": {
+      "title": "Join the Al Hanan Community",
+      "description": "Give your child the opportunity to learn from dedicated leaders and grow in an environment of excellence and faith.",
+      "enroll": "Enroll Today",
+      "contact": "Get in Touch"
+    }
   }
 }

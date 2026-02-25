@@ -64,6 +64,8 @@ export default function MobileBottomNav() {
     { label: t("nav.schoolLife"), href: "/school-life" },
     { label: t("nav.gallery"), href: "/gallery" },
     { label: t("nav.location"), href: "/location" },
+    { label: t("nav.classtime"), href: "/classtime" },
+    { label: t("nav.administration"), href: "/administration" },
     { label: t("nav.blog"), href: "/blog" },
     { label: t("nav.faq"), href: "/faq" },
     { label: t("nav.caseStudies"), href: "/case-studies" },

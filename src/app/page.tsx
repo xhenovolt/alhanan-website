@@ -153,16 +153,14 @@ export default function HomePage() {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.8 }}
 						>
-							<h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6">
-								<span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-									{t("hero.tagline").split(",")[0]},
-								</span>
-								<br />
-								<span className="text-white drop-shadow-lg">
-									{t("hero.tagline").split(",").slice(1).join(",")}
-								</span>
-							</h1>
-							<p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
+							<div className="mb-6">
+								<p className="text-emerald-300 text-lg font-semibold mb-3">{t("homepage.foundation.foundedBy")}</p>
+								<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight">
+									{t("hero.heading")}
+								</h1>
+								<p className="text-emerald-200 text-xl font-semibold italic mb-6">{t("hero.subheading")}</p>
+							</div>
+							<p className="text-lg sm:text-xl lg:text-lg text-white/85 mb-6 sm:mb-8 leading-relaxed max-w-2xl">
 								{t("hero.description")}
 							</p>
 							<div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -333,8 +331,157 @@ export default function HomePage() {
 				</div>
 			</section>
 
-		{/* Student Life & Activities Showcase */}
+		{/* Our Foundation Section */}
+		<section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<motion.div
+						initial={{ opacity: 0, x: -30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8 }}
+					>
+						<div className="mb-8">
+							<h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+								{t("homepage.foundation.title")}
+							</h2>
+							<p className="text-xl font-semibold text-emerald-600 dark:text-emerald-400 mb-6">
+								{t("homepage.foundation.subtitle")}
+							</p>
+						</div>
+						<p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+							<span className="font-semibold text-emerald-700 dark:text-emerald-300">
+								{t("homepage.foundation.foundedBy")}
+							</span>
+						</p>
+						<p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+							{t("homepage.foundation.paragraph1")}
+						</p>
+						<p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+							{t("homepage.foundation.paragraph2")}
+						</p>
+						<div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+							<p className="text-emerald-700 dark:text-emerald-400 font-bold mb-4">{t("homepage.foundation.coreValues")}</p>
+							<ul className="space-y-3">
+								{[
+									t("homepage.foundation.value1"),
+									t("homepage.foundation.value2"),
+									t("homepage.foundation.value3"),
+									t("homepage.foundation.value4"),
+									t("homepage.foundation.value5"),
+								].map((value, idx) => (
+									<li key={idx} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+										<CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+										<span>{value}</span>
+									</li>
+								))}
+							</ul>
+						</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, x: 30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="relative"
+					>
+						<div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+							<Image
+								src="/Alhanan/new/Mosque.JPG"
+								alt="Al Hanan Mosque - Faith-centered learning environment"
+								fill
+								className="object-cover"
+								sizes="(max-width: 768px) 100vw, 50vw"
+								quality={85}
+							/>
+							<div className="absolute inset-0 bg-gradient-to-t from-emerald-900/40 to-transparent" />
+						</div>
+					</motion.div>
+				</div>
+			</div>
+		</section>
+
+		{/* Balanced Education Approach Section */}
 		<section className="py-12 sm:py-16 md:py-20">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6">
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+					className="text-center mb-12 sm:mb-16"
+				>
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+						{t("homepage.educationModel.title")}
+					</h2>
+					<p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+						{t("homepage.educationModel.subtitle")}
+					</p>
+					<p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
+						{t("homepage.educationModel.intro")}
+					</p>
+				</motion.div>
+
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+					{[
+						{
+							icon: <Users className="w-8 h-8" />,
+							title: t("homepage.educationModel.pillar1.title"),
+							description: t("homepage.educationModel.pillar1.description"),
+						},
+						{
+							icon: <Globe className="w-8 h-8" />,
+							title: t("homepage.educationModel.pillar2.title"),
+							description: t("homepage.educationModel.pillar2.description"),
+						},
+						{
+							icon: <Shield className="w-8 h-8" />,
+							title: t("homepage.educationModel.pillar3.title"),
+							description: t("homepage.educationModel.pillar3.description"),
+						},
+						{
+							icon: <Star className="w-8 h-8" />,
+							title: t("homepage.educationModel.pillar4.title"),
+							description: t("homepage.educationModel.pillar4.description"),
+						},
+					].map((pillar, index) => (
+						<motion.div
+							key={index}
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: index * 0.1 }}
+							whileHover={{ scale: 1.05, y: -10 }}
+							className="bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-emerald-900/30 dark:to-blue-900/30 rounded-2xl p-6 shadow-lg border border-emerald-100 dark:border-emerald-800 hover:shadow-xl transition-all duration-300"
+						>
+							<div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-4">
+								{pillar.icon}
+							</div>
+							<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+								{pillar.title}
+							</h3>
+							<p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+								{pillar.description}
+							</p>
+						</motion.div>
+					))}
+				</div>
+
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					className="bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-500 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl"
+				>
+					<p className="text-xl md:text-2xl font-bold leading-relaxed">
+						{t("homepage.educationModel.difference")}
+					</p>
+				</motion.div>
+			</div>
+		</section>
+
+		{/* Student Life & Activities Showcase */}
+		<section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-emerald-50 dark:from-gray-900 dark:to-emerald-900/10">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
@@ -347,60 +494,133 @@ export default function HomePage() {
 						Life at Al Hanan
 					</h2>
 					<p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-						More than academics—our learners develop as complete individuals through structured activities, holistic development, and Islamic values
+						More than academics—our learners develop as complete individuals through comprehensive Qur'anic training, rigorous academics, Islamic studies, and character formation
 					</p>
 				</motion.div>
 
+				{/* Qur'an Learning - Featured */}
+				<div className="mb-12">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="relative h-[350px] rounded-3xl overflow-hidden shadow-2xl group"
+					>
+						<Image
+							src="/Alhanan/new/Primary4.JPG"
+							alt="Students engaged in Qur'an memorization and learning"
+							fill
+							className="object-cover group-hover:scale-105 transition-transform duration-500"
+							sizes="100vw"
+							quality={85}
+						/>
+						<div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 via-emerald-900/40 to-transparent" />
+						<div className="absolute inset-0 flex items-center">
+							<div className="max-w-2xl p-6 sm:p-8 md:p-12 text-white">
+								<h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+									✨ Qur'an Memorization Journey
+								</h3>
+								<p className="text-base sm:text-lg text-white/90">
+									Every learner at Al Hanan embarks on a sacred journey to memorize the entire Holy Qur'an. Daily structured sessions, expert guidance, and unwavering commitment ensure success by Primary Seven graduation.
+								</p>
+							</div>
+						</div>
+					</motion.div>
+				</div>
+
+				{/* Six Key Areas of Life at Al Hanan */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-					{[1, 2, 3].map((idx) => (
+					{[
+						{
+							image: "/Alhanan/new/Primary21.JPG",
+							title: "📖 Islamic Studies",
+							description: "Theology, jurisprudence, and Islamic history integrated into daily learning",
+							color: "from-emerald-500 to-emerald-600"
+						},
+						{
+							image: "/Alhanan/new/Primary22.JPG",
+							title: "🎓 Academic Excellence",
+							description: "Rigorous English, Arabic, Mathematics, and Science delivered with precision",
+							color: "from-blue-500 to-blue-600"
+						},
+						{
+							image: "/Alhanan/new/Primary31.JPG",
+							title: "⚽ Sports & Development",
+							description: "Physical education and sporting activities for holistic growth",
+							color: "from-cyan-500 to-cyan-600"
+						},
+						{
+							image: "/Alhanan/new/Primary32.JPG",
+							title: "🎨 Arts & Culture",
+							description: "Creative expression celebrating Islamic and African heritage",
+							color: "from-purple-500 to-purple-600"
+						},
+						{
+							image: "/Alhanan/new/AdminBlock1.JPG",
+							title: "🏛️ World-Class Facilities",
+							description: "Modern classrooms, mosque, administration, and learning spaces",
+							color: "from-yellow-500 to-yellow-600"
+						},
+						{
+							image: "/Alhanan/new/PlayTime1.JPG",
+							title: "👥 Community & Discipline",
+							description: "Structured activities building leadership, teamwork, and Islamic values",
+							color: "from-pink-500 to-pink-600"
+						},
+					].map((item, idx) => (
 						<motion.div
 							key={idx}
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ delay: idx * 0.1 }}
-							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group"
+							transition={{ delay: idx * 0.08 }}
+							whileHover={{ y: -10 }}
+							className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 						>
 							<Image
-								src={`/Alhanan/Breaktime${idx}.JPG`}
-								alt={`Al Hanan students in recreational and developmental activities - moment ${idx}`}
+								src={item.image}
+								alt={item.title}
 								fill
 								className="object-cover group-hover:scale-110 transition-transform duration-500"
 								sizes="(max-width: 768px) 100vw, 33vw"
 								quality={85}
 							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 via-emerald-900/40 to-transparent" />
-							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-								<h3 className="font-bold text-lg">{["Student Activities", "Peer Interaction", "Creative Play"][idx - 1]}</h3>
+							<div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent group-hover:from-gray-900/95 transition-all duration-300" />
+							<div className="absolute bottom-0 left-0 right-0 p-4">
+								<h4 className="font-bold text-white text-lg mb-2">{item.title}</h4>
+								<p className="text-white/80 text-sm">{item.description}</p>
 							</div>
 						</motion.div>
 					))}
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-					{[4, 5].map((idx) => (
-						<motion.div
-							key={idx}
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ delay: idx * 0.1 }}
-							className="relative h-[250px] rounded-2xl overflow-hidden shadow-lg group"
-						>
-							<Image
-								src={`/Alhanan/Breaktime${idx}.JPG`}
-								alt={`Al Hanan school environment and student engagement - scene ${idx}`}
-								fill
-								className="object-cover group-hover:scale-110 transition-transform duration-500"
-								sizes="(max-width: 768px) 100vw, 50vw"
-								quality={85}
-							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/40 to-transparent" />
-							<div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-								<h3 className="font-bold text-lg">{["Collaborative Learning", "Physical Development"][idx - 4]}</h3>
+				{/* Daily Schedule / Holistic Experience */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					className="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-emerald-100 dark:border-emerald-900"
+				>
+					<h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+						A Day at Al Hanan
+					</h3>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+						{[
+							{ time: "7:30 AM", activity: "Arrival & Morning Qur'an", icon: "📖" },
+							{ time: "9:00 AM", activity: "Core Academic Classes", icon: "🎓" },
+							{ time: "12:30 PM", activity: "Midday Prayers & Nutrition", icon: "🙏" },
+							{ time: "1:30 PM", activity: "Islamic Studies & Activities", icon: "📚" },
+						].map((slot, idx) => (
+							<div key={idx} className="text-center p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+								<div className="text-3xl mb-2">{slot.icon}</div>
+								<div className="font-bold text-emerald-600 dark:text-emerald-400 mb-1">{slot.time}</div>
+								<div className="text-gray-700 dark:text-gray-300 text-sm">{slot.activity}</div>
 							</div>
-						</motion.div>
-					))}
+						))}
+					</div>
+				</motion.div>
+			</div>
+		</section>
 				</div>
 			</div>
 		</section>
@@ -463,6 +683,132 @@ export default function HomePage() {
 
 			{/* Team Section */}
 			<TeamSection />
+
+		{/* Trust Signals & Accreditation Section */}
+		<section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6">
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+					className="text-center mb-12 sm:mb-16"
+				>
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+						🏆 Trusted, Recognized, Excellent
+					</h2>
+					<p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+						Al Hanan is officially registered with the Ministry of Education and holds high standards in Islamic education and academic excellence.
+					</p>
+				</motion.div>
+
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-emerald-200 dark:border-emerald-700/50"
+					>
+						<div className="text-4xl mb-4">✅</div>
+						<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Ministry Registered</h3>
+						<p className="text-gray-600 dark:text-gray-300">
+							100% fully registered and recognized by the Ministry of Education and Sports, Uganda. Operating with full compliance to national educational standards.
+						</p>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.1 }}
+						className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-blue-200 dark:border-blue-700/50"
+					>
+						<div className="text-4xl mb-4">📚</div>
+						<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Expert Staff</h3>
+						<p className="text-gray-600 dark:text-gray-300">
+							Qualified educators with diploma-level minimum qualifications. Specialized Qur'anic teachers with proven track records in memorization coaching.
+						</p>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.2 }}
+						className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-cyan-200 dark:border-cyan-700/50"
+					>
+						<div className="text-4xl mb-4">🎯</div>
+						<h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Proven Results</h3>
+						<p className="text-gray-600 dark:text-gray-300">
+							Average PLE scores of 319+ at distinction level. 100% of learners complete Qur'anic memorization by Primary Seven. 100% secondary school transition.
+						</p>
+					</motion.div>
+				</div>
+
+				{/* Success by the Numbers */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					className="bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-500 rounded-3xl p-8 md:p-12 text-white shadow-2xl"
+				>
+					<h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Al Hanan by the Numbers</h3>
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+						<div className="text-center">
+							<div className="text-3xl md:text-4xl font-bold mb-2">2019</div>
+							<div className="text-white/80">Founded with Vision</div>
+						</div>
+						<div className="text-center">
+							<div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
+							<div className="text-white/80">Learners Served</div>
+						</div>
+						<div className="text-center">
+							<div className="text-3xl md:text-4xl font-bold mb-2">100%</div>
+							<div className="text-white/80">Ministry Registered</div>
+						</div>
+						<div className="text-center">
+							<div className="text-3xl md:text-4xl font-bold mb-2">319+</div>
+							<div className="text-white/80">PLE Distinction Average</div>
+						</div>
+					</div>
+				</motion.div>
+
+				{/* Program Standards */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ delay: 0.2 }}
+					className="mt-12 bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg"
+				>
+					<h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Our Standards & Commitments</h3>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div>
+							<h4 className="font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
+								<CheckCircle className="w-5 h-5" /> Academic Excellence
+							</h4>
+							<ul className="space-y-2 text-gray-600 dark:text-gray-300">
+								<li>✓ Maximum 35 learners per class</li>
+								<li>✓ Daily assessments and monthly evaluations</li>
+								<li>✓ Weekly parent progress updates</li>
+								<li>✓ National curriculum + enrichment</li>
+							</ul>
+						</div>
+						<div>
+							<h4 className="font-bold text-blue-600 dark:text-blue-400 mb-4 flex items-center gap-2">
+								<CheckCircle className="w-5 h-5" /> Qur'anic Excellence
+							</h4>
+							<ul className="space-y-2 text-gray-600 dark:text-gray-300">
+								<li>✓ Minimum 2 hours daily Qur'an study</li>
+								<li>✓ Expert Qur'anic teacher guidance</li>
+								<li>✓ Full Hifdh completion by Primary Seven</li>
+								<li>✓ Structured memorization curriculum</li>
+							</ul>
+						</div>
+					</div>
+				</motion.div>
+			</div>
+		</section>
 
 		{/* CTA Section */}
 		<section className="py-12 sm:py-16 md:py-20">

@@ -23,7 +23,8 @@
     "moreOptions": "More Options",
     "language": "عربي",
     "classtime": "Class Time",
-    "administration": "Administration"
+    "administration": "Administration",
+    "more": "More"
   },
   "common": {
     "language": "Language",
@@ -33,12 +34,13 @@
     "sermonCaption": "Abdul Swabur delivering a Friday sermon at Al Hanan Education Centre."
   },
   "hero": {
-    "tagline": "Shaping minds, nurturing faith, building the future",
-    "heading": "Africa's Premier Islamic Academic Institution",
-    "description": "Al Hanan Education Centre represents the highest standard of Islamic education in East Africa. We combine rigorous academics, complete Qur'anic memorization, and Islamic discipline to produce exceptional Muslim leaders ready to transform their communities.",
-    "credibility": "Ministry of Education Registered • Est. 2019 • 500+ Learners Served",
+    "tagline": "Building Minds, Nurturing Faith, Transforming Lives",
+    "heading": "Qur'anic Excellence Meets Academic Mastery",
+    "subheading": "Where Every Learner Becomes a Hafiz of the Qur'an",
+    "description": "Al Hanan Education Centre is a faith-centered institution dedicated to producing learners who have memorized the entire Holy Qur'an while achieving academic excellence. Founded by Ummul Qura to strengthen Islamic education in East Africa, we combine rigorous academics, complete Qur'anic memorization (Hifdh), and Islamic discipline to shape disciplined, excellent leaders ready to transform their communities.",
+    "credibility": "Ministry of Education Registered • Founded 2019 • 500+ Learners Served",
     "ctaButton": "Explore Our Programs",
-    "ctaSecondary": "Schedule a Visit"
+    "ctaSecondary": "Schedule a Factory Visit"
   },
   "features": {
     "quranMemorization": {
@@ -454,6 +456,42 @@
     "quote": "Al Hanan learners are far different from ordinary learners.",
     "whyTitle": "Why Al Hanan?",
     "whyDescription": "We don't just teach academics, we shape minds through faith, discipline, and excellence. Here's what sets us apart.",
+    "foundation": {
+      "title": "Our Foundation & Purpose",
+      "subtitle": "Built on Faith, Grounded in Purpose",
+      "foundedBy": "Founded by Ummul Qura Cultural and Development Organization",
+      "established": "Established: Early 2020s",
+      "paragraph1": "Al Hanan Education Centre exists for a singular, sacred purpose: to strengthen Qur'anic memorization among learners while maintaining academic excellence. We were established by Ummul Qura, a organization dedicated to advancing Islamic education and cultural development in Africa.",
+      "paragraph2": "Every decision we make, every program we design, every learner we accept—is guided by our unwavering commitment to producing Hafiz of the Qur'an who are also academically excellent and morally upright.",
+      "coreValues": "At Al Hanan, we believe:",
+      "value1": "The Qur'an is the foundation of all learning",
+      "value2": "Academic excellence reflects discipline and character",
+      "value3": "Faith and knowledge are complementary, not competing",
+      "value4": "Every learner deserves access to premium Islamic education",
+      "value5": "Community transformation begins with one excellent child at a time"
+    },
+    "educationModel": {
+      "title": "Our Balanced Education Approach",
+      "subtitle": "Deen + Dunya: Faith and Knowledge in Perfect Balance",
+      "intro": "Al Hanan's educational model is unique. We refuse the false choice between religious education and academic excellence. Instead, we integrate both—creating learners who are:",
+      "pillar1": {
+        "title": "Qur'an Memorization (Hifdh)",
+        "description": "Complete memorization of the entire Holy Qur'an, structured in daily sessions with expert guidance. By Primary Seven graduation, every learner becomes a certified Hafiz."
+      },
+      "pillar2": {
+        "title": "Rigorous Academics",
+        "description": "Full national curriculum delivered with excellence: English, Arabic, Mathematics, Science, Social Studies—ensuring high performance in Primary Leaving Examinations."
+      },
+      "pillar3": {
+        "title": "Islamic Integration",
+        "description": "Islamic principles, theology, and values woven into every subject and every classroom interaction—creating a cohesive faith-centered learning experience."
+      },
+      "pillar4": {
+        "title": "Character Development",
+        "description": "Discipline, integrity, leadership, and service embedded in daily school life—shaping not just students, but future community leaders."
+      },
+      "difference": "This is the Al Hanan Difference. We don't compromise on Qur'an to boost exam scores. We don't neglect academics to focus on faith. We do both, excellently."
+    },
     "solutions": {
       "quran": {
         "description": "Students memorize and master the entire Holy Qur'an with expert guidance, completing their Hifdh by Primary Seven graduation.",

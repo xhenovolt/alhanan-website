@@ -20,7 +20,199 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const galleryImages: GalleryItem[] = [
-    // Featured/Hero Images
+    // ===== QURANIC LEARNING FOCUS =====
+    {
+      src: "/Alhanan/new/Primary4.JPG",
+      alt: "Qur'anic memorization learning at Al Hanan",
+      title: "Qur'anic Memorization",
+      category: "Qur'anic Learning"
+    },
+    {
+      src: "/Alhanan/new/Primary21.JPG",
+      alt: "Islamic studies and Qur'anic training",
+      title: "Islamic Studies",
+      category: "Qur'anic Learning"
+    },
+    {
+      src: "/Alhanan/new/Primary22.JPG",
+      alt: "Dedicated Qur'an memorization sessions",
+      title: "Memorization Session",
+      category: "Qur'anic Learning"
+    },
+    {
+      src: "/Alhanan/new/Mosque.JPG",
+      alt: "Al Hanan mosque - heart of faith-centered learning",
+      title: "School Mosque",
+      category: "Islamic Facilities"
+    },
+    
+    // ===== ACADEMIC SPACES =====
+    {
+      src: "/Alhanan/new/Primary31.JPG",
+      alt: "Academic classroom at Al Hanan",
+      title: "Academic Class",
+      category: "Academic Spaces"
+    },
+    {
+      src: "/Alhanan/new/Primary32.JPG",
+      alt: "Students engaged in academic learning",
+      title: "Learning Session",
+      category: "Academic Spaces"
+    },
+    {
+      src: "/Alhanan/new/Primary6Ultrawide.JPG",
+      alt: "Ultra-wide view of classroom facility",
+      title: "Classroom Facility",
+      category: "Academic Spaces"
+    },
+    {
+      src: "/Alhanan/new/PrimarySix.JPG",
+      alt: "Primary six classroom environment",
+      title: "Primary Six",
+      category: "Academic Spaces"
+    },
+    {
+      src: "/Alhanan/new/Primaryr5.JPG",
+      alt: "Primary five classroom",
+      title: "Primary Five",
+      category: "Academic Spaces"
+    },
+    
+    // ===== FACILITIES & INFRASTRUCTURE =====
+    {
+      src: "/Alhanan/new/AdminBlock1.JPG",
+      alt: "Administrative block at Al Hanan",
+      title: "Admin Block 1",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/AdminBlock2.JPG",
+      alt: "Administration facility view",
+      title: "Admin Block 2",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/AdminBlock3.JPG",
+      alt: "Administration building",
+      title: "Admin Block 3",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/AdminBlock4.JPG",
+      alt: "Admin office spaces",
+      title: "Admin Block 4",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/AdminBlock5.JPG",
+      alt: "Administrative center",
+      title: "Admin Block 5",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/ArialView10.JPG",
+      alt: "Aerial view 10",
+      title: "Aerial View 10",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/ArialView15.JPG",
+      alt: "Aerial view 15",
+      title: "Aerial View 15",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/ArialView11.JPG",
+      alt: "Aerial view 11",
+      title: "Aerial View 11",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/Dormitory1.JPG",
+      alt: "Boys dormitory at Al Hanan",
+      title: "Dormitory 1",
+      category: "Facilities"
+    },
+    {
+      src: "/Alhanan/new/Dormitory2.JPG",
+      alt: "Dormitory accommodation",
+      title: "Dormitory 2",
+      category: "Facilities"
+    },
+    
+    // ===== STUDENT LIFE & ACTIVITIES =====
+    {
+      src: "/Alhanan/new/PlayTime1.JPG",
+      alt: "Students during playtime",
+      title: "Playtime 1",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime2.JPG",
+      alt: "Student activities",
+      title: "Playtime 2",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime3.JPG",
+      alt: "Recreational activities",
+      title: "Playtime 3",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime4.JPG",
+      alt: "Student engagement",
+      title: "Playtime 4",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime5.JPG",
+      alt: "Play and learning",
+      title: "Playtime 5",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime10.JPG",
+      alt: "Group activities",
+      title: "Playtime 10",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime12.JPG",
+      alt: "Student interaction",
+      title: "Playtime 12",
+      category: "Activities & Student Life"
+    },
+    {
+      src: "/Alhanan/new/PlayTime15.JPG",
+      alt: "Community building",
+      title: "Playtime 15",
+      category: "Activities & Student Life"
+    },
+    
+    // ===== ACHIEVEMENTS & RECOGNITION =====
+    {
+      src: "/Alhanan/new/Badge1.JPG",
+      alt: "Al Hanan achievement badge",
+      title: "Achievement Badge 1",
+      category: "Achievements"
+    },
+    {
+      src: "/Alhanan/new/Badge2.JPG",
+      alt: "Recognition and awards",
+      title: "Achievement Badge 2",
+      category: "Achievements"
+    },
+    
+    // ===== HERITAGE & LOCATION =====
+    {
+      src: "/Alhanan/new/MapOfUganda.JPG",
+      alt: "Al Hanan location in Uganda",
+      title: "Location Map",
+      category: "Heritage"
+    },
+
+    // LEGACY IMAGES (from existing folder)
     {
       src: "/Alhanan/Alhanan compound.jpeg",
       alt: "Al Hanan Education Centre compound with school buildings and mosque dome",
@@ -45,109 +237,12 @@ export default function GalleryPage() {
       title: "Nursery Classes",
       category: "Academic Spaces"
     },
-    // Aerial Views
     {
       src: "/Alhanan/ArialView01.JPG",
       alt: "Aerial view of Al Hanan compound - overview 1",
       title: "Aerial View 1",
       category: "Facilities"
     },
-    {
-      src: "/Alhanan/ArialView02.JPG",
-      alt: "Aerial view of Al Hanan compound - overview 2",
-      title: "Aerial View 2",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/ArialView03.JPG",
-      alt: "Aerial view of Al Hanan compound - overview 3",
-      title: "Aerial View 3",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/ArialView04.JPG",
-      alt: "Aerial view of Al Hanan compound - overview 4",
-      title: "Aerial View 4",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/ArialView1.JPG",
-      alt: "Aerial view of Al Hanan compound - landscape 1",
-      title: "Aerial Landscape 1",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/ArialView2.JPG",
-      alt: "Aerial view of Al Hanan compound - landscape 2",
-      title: "Aerial Landscape 2",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/ArialView3.JPG",
-      alt: "Aerial view of Al Hanan compound - landscape 3",
-      title: "Aerial Landscape 3",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/ArialView4.JPG",
-      alt: "Aerial view of Al Hanan compound - landscape 4",
-      title: "Aerial Landscape 4",
-      category: "Facilities"
-    },
-    // Boys Dormitory
-    {
-      src: "/Alhanan/BoysDormitory1.JPG",
-      alt: "Boys dormitory facility at Al Hanan - view 1",
-      title: "Boys Dormitory 1",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/BoysDormitory2.JPG",
-      alt: "Boys dormitory facility at Al Hanan - view 2",
-      title: "Boys Dormitory 2",
-      category: "Facilities"
-    },
-    {
-      src: "/Alhanan/BoysDormitory3.JPG",
-      alt: "Boys dormitory facility at Al Hanan - view 3",
-      title: "Boys Dormitory 3",
-      category: "Facilities"
-    },
-    // Breaktime Activities
-    {
-      src: "/Alhanan/Breaktime1.JPG",
-      alt: "Learners during breaktime at Al Hanan - activity 1",
-      title: "Breaktime Activity 1",
-      category: "Activities & Student Life"
-    },
-    {
-      src: "/Alhanan/Breaktime2.JPG",
-      alt: "Learners during breaktime at Al Hanan - activity 2",
-      title: "Breaktime Activity 2",
-      category: "Activities & Student Life"
-    },
-    {
-      src: "/Alhanan/Breaktime3.JPG",
-      alt: "Learners during breaktime at Al Hanan - activity 3",
-      title: "Breaktime Activity 3",
-      category: "Activities & Student Life"
-    },
-    {
-      src: "/Alhanan/Breaktime4.JPG",
-      alt: "Learners during breaktime at Al Hanan - activity 4",
-      title: "Breaktime Activity 4",
-      category: "Activities & Student Life"
-    },
-    {
-      src: "/Alhanan/Breaktime5.JPG",
-      alt: "Learners during breaktime at Al Hanan - activity 5",
-      title: "Breaktime Activity 5",
-      category: "Activities & Student Life"
-    },
-    {
-      src: "/Alhanan/Breaktime6.JPG",
-      alt: "Learners during breaktime at Al Hanan - activity 6",
-      title: "Breaktime Activity 6",
       category: "Activities & Student Life"
     },
     {
@@ -479,11 +574,13 @@ export default function GalleryPage() {
 
   const categories = [
     { id: "all", label: "All Gallery" },
-    { id: "Facilities", label: "Facilities & Infrastructure" },
-    { id: "Academic Spaces", label: "Academic Spaces" },
-    { id: "Activities & Student Life", label: "Activities & Student Life" },
-    { id: "School Events", label: "School Events" },
-    { id: "Community Moments", label: "Community Moments" },
+    { id: "Qur'anic Learning", label: "🕌 Qur'anic Learning" },
+    { id: "Islamic Facilities", label: "📖 Islamic Facilities" },
+    { id: "Academic Spaces", label: "🎓 Academic Spaces" },
+    { id: "Facilities", label: "🏛️ Facilities & Infrastructure" },
+    { id: "Activities & Student Life", label: "👥 Student Life" },
+    { id: "Achievements", label: "🏆 Achievements" },
+    { id: "Heritage", label: "🌍 Heritage" },
   ];
 
   const filteredImages = activeCategory === "all" 

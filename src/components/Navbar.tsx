@@ -70,7 +70,21 @@ export default function Navbar() {
       ]
     },
     { name: t("nav.administration"), href: "/administration" },
-    { name: t("nav.location"), href: "/location" }
+    { name: t("nav.location"), href: "/location" },
+    {
+      name: t("nav.more"),
+      href: "#",
+      dropdown: [
+        { name: t("nav.blog"), href: "/blog" },
+        { name: t("nav.faq"), href: "/faq" },
+        { name: t("nav.caseStudies"), href: "/case-studies" },
+        { name: t("nav.testimonials"), href: "/testimonials" },
+        { name: t("nav.services"), href: "/services" },
+        { name: t("nav.privacyPolicy"), href: "/privacy-policy" },
+        { name: t("nav.termsOfService"), href: "/terms-of-service" },
+        { name: t("nav.newsletter"), href: "/newsletter" }
+      ]
+    }
   ];
 
   return (
